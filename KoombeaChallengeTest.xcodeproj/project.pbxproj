@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44695B48CF9F431A0D01F246 /* Pods_KoombeaChallengeTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06137C1EB59F830EE836AB99 /* Pods_KoombeaChallengeTestTests.framework */; };
 		7C26A73226FF7731000F5984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A73126FF7731000F5984 /* AppDelegate.swift */; };
 		7C26A73426FF7731000F5984 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A73326FF7731000F5984 /* SceneDelegate.swift */; };
 		7C26A73626FF7731000F5984 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A73526FF7731000F5984 /* ViewController.swift */; };
@@ -16,6 +17,25 @@
 		7C26A74126FF7733000F5984 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C26A73F26FF7733000F5984 /* LaunchScreen.storyboard */; };
 		7C26A74C26FF7733000F5984 /* KoombeaChallengeTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A74B26FF7733000F5984 /* KoombeaChallengeTestTests.swift */; };
 		7C26A75726FF7733000F5984 /* KoombeaChallengeTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A75626FF7733000F5984 /* KoombeaChallengeTestUITests.swift */; };
+		7C26A76826FF7EBF000F5984 /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A76726FF7EBF000F5984 /* PostsService.swift */; };
+		7C26A76A26FF7F54000F5984 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A76926FF7F54000F5984 /* Constants.swift */; };
+		7C26A76C26FF8229000F5984 /* ViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A76B26FF8229000F5984 /* ViewControllerViewModel.swift */; };
+		7C26A76F26FF8386000F5984 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A76E26FF8386000F5984 /* Post.swift */; };
+		7C26A77326FFAB81000F5984 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A77126FFAB81000F5984 /* PostTableViewCell.swift */; };
+		7C26A77426FFAB81000F5984 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C26A77226FFAB81000F5984 /* PostTableViewCell.xib */; };
+		7C26A77B26FFD46D000F5984 /* PostUserViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A77926FFD46D000F5984 /* PostUserViewCell.swift */; };
+		7C26A77C26FFD46D000F5984 /* PostUserViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C26A77A26FFD46D000F5984 /* PostUserViewCell.xib */; };
+		7C26A77F26FFF2A4000F5984 /* PictureViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A77D26FFF2A4000F5984 /* PictureViewCell.swift */; };
+		7C26A78026FFF2A4000F5984 /* PictureViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C26A77E26FFF2A4000F5984 /* PictureViewCell.xib */; };
+		7C26A784270004C1000F5984 /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A782270004C1000F5984 /* DetailPostViewController.swift */; };
+		7C26A785270004C1000F5984 /* DetailPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C26A783270004C1000F5984 /* DetailPostViewController.xib */; };
+		7C26A7882700AB2B000F5984 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A7872700AB2A000F5984 /* DBService.swift */; };
+		7C85B5762700FB42002A0C8C /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C85B5752700FB42002A0C8C /* TableHeaderView.swift */; };
+		7C85B57A2700FB7B002A0C8C /* TableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C85B5792700FB7B002A0C8C /* TableHeaderView.xib */; };
+		7C85B57E27010F18002A0C8C /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C85B57D27010F18002A0C8C /* UITableView+Extensions.swift */; };
+		7C85B58127011B2C002A0C8C /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C85B58027011B2C002A0C8C /* Date+Extensions.swift */; };
+		8E446D2BE765ADAD6694C4DD /* Pods_KoombeaChallengeTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C037085C192F6EEB03D206 /* Pods_KoombeaChallengeTest.framework */; };
+		CA7A04E0D0F60EEA57E8A646 /* Pods_KoombeaChallengeTest_KoombeaChallengeTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9AB56F1B32E3FAB4FA2BAC7 /* Pods_KoombeaChallengeTest_KoombeaChallengeTestUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06137C1EB59F830EE836AB99 /* Pods_KoombeaChallengeTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoombeaChallengeTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39CFEA5B3DDC62973405C6DE /* Pods-KoombeaChallengeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaChallengeTest.release.xcconfig"; path = "Target Support Files/Pods-KoombeaChallengeTest/Pods-KoombeaChallengeTest.release.xcconfig"; sourceTree = "<group>"; };
+		4900FD63782C848655087362 /* Pods-KoombeaChallengeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaChallengeTest.debug.xcconfig"; path = "Target Support Files/Pods-KoombeaChallengeTest/Pods-KoombeaChallengeTest.debug.xcconfig"; sourceTree = "<group>"; };
 		7C26A72E26FF7731000F5984 /* KoombeaChallengeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoombeaChallengeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C26A73126FF7731000F5984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C26A73326FF7731000F5984 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +74,29 @@
 		7C26A75226FF7733000F5984 /* KoombeaChallengeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoombeaChallengeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C26A75626FF7733000F5984 /* KoombeaChallengeTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoombeaChallengeTestUITests.swift; sourceTree = "<group>"; };
 		7C26A75826FF7733000F5984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C26A76726FF7EBF000F5984 /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
+		7C26A76926FF7F54000F5984 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7C26A76B26FF8229000F5984 /* ViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerViewModel.swift; sourceTree = "<group>"; };
+		7C26A76E26FF8386000F5984 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		7C26A77126FFAB81000F5984 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		7C26A77226FFAB81000F5984 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		7C26A77926FFD46D000F5984 /* PostUserViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUserViewCell.swift; sourceTree = "<group>"; };
+		7C26A77A26FFD46D000F5984 /* PostUserViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostUserViewCell.xib; sourceTree = "<group>"; };
+		7C26A77D26FFF2A4000F5984 /* PictureViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureViewCell.swift; sourceTree = "<group>"; };
+		7C26A77E26FFF2A4000F5984 /* PictureViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureViewCell.xib; sourceTree = "<group>"; };
+		7C26A782270004C1000F5984 /* DetailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
+		7C26A783270004C1000F5984 /* DetailPostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPostViewController.xib; sourceTree = "<group>"; };
+		7C26A7872700AB2A000F5984 /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+		7C85B5752700FB42002A0C8C /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
+		7C85B5792700FB7B002A0C8C /* TableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableHeaderView.xib; sourceTree = "<group>"; };
+		7C85B57D27010F18002A0C8C /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		7C85B58027011B2C002A0C8C /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		A9AB56F1B32E3FAB4FA2BAC7 /* Pods_KoombeaChallengeTest_KoombeaChallengeTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoombeaChallengeTest_KoombeaChallengeTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADD51521C6DB8D9FE4CD0513 /* Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests.release.xcconfig"; path = "Target Support Files/Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests/Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B1C037085C192F6EEB03D206 /* Pods_KoombeaChallengeTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoombeaChallengeTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B77D541549C8E2CDC95DC58F /* Pods-KoombeaChallengeTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaChallengeTestTests.debug.xcconfig"; path = "Target Support Files/Pods-KoombeaChallengeTestTests/Pods-KoombeaChallengeTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CA68344986DAE9DB72424F8E /* Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests/Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D34E16CE7A1467F25790E8A7 /* Pods-KoombeaChallengeTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaChallengeTestTests.release.xcconfig"; path = "Target Support Files/Pods-KoombeaChallengeTestTests/Pods-KoombeaChallengeTestTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E446D2BE765ADAD6694C4DD /* Pods_KoombeaChallengeTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44695B48CF9F431A0D01F246 /* Pods_KoombeaChallengeTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +120,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA7A04E0D0F60EEA57E8A646 /* Pods_KoombeaChallengeTest_KoombeaChallengeTestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2298A17D6052E070369693C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4900FD63782C848655087362 /* Pods-KoombeaChallengeTest.debug.xcconfig */,
+				39CFEA5B3DDC62973405C6DE /* Pods-KoombeaChallengeTest.release.xcconfig */,
+				CA68344986DAE9DB72424F8E /* Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests.debug.xcconfig */,
+				ADD51521C6DB8D9FE4CD0513 /* Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests.release.xcconfig */,
+				B77D541549C8E2CDC95DC58F /* Pods-KoombeaChallengeTestTests.debug.xcconfig */,
+				D34E16CE7A1467F25790E8A7 /* Pods-KoombeaChallengeTestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7C26A72526FF7731000F5984 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +147,8 @@
 				7C26A74A26FF7733000F5984 /* KoombeaChallengeTestTests */,
 				7C26A75526FF7733000F5984 /* KoombeaChallengeTestUITests */,
 				7C26A72F26FF7731000F5984 /* Products */,
+				2298A17D6052E070369693C4 /* Pods */,
+				DC996839075880D0AF26275F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +165,11 @@
 		7C26A73026FF7731000F5984 /* KoombeaChallengeTest */ = {
 			isa = PBXGroup;
 			children = (
-				7C26A73126FF7731000F5984 /* AppDelegate.swift */,
-				7C26A73326FF7731000F5984 /* SceneDelegate.swift */,
-				7C26A73526FF7731000F5984 /* ViewController.swift */,
-				7C26A73726FF7731000F5984 /* Main.storyboard */,
-				7C26A73D26FF7733000F5984 /* Assets.xcassets */,
-				7C26A73F26FF7733000F5984 /* LaunchScreen.storyboard */,
-				7C26A74226FF7733000F5984 /* Info.plist */,
+				7C26A781270004A4000F5984 /* Detail */,
+				7C26A76526FF7E51000F5984 /* Main */,
+				7C26A76426FF7E1B000F5984 /* Resources */,
 				7C26A73A26FF7731000F5984 /* KoombeaChallengeTest.xcdatamodeld */,
+				7C26A74226FF7733000F5984 /* Info.plist */,
 			);
 			path = KoombeaChallengeTest;
 			sourceTree = "<group>";
@@ -131,6 +192,124 @@
 			path = KoombeaChallengeTestUITests;
 			sourceTree = "<group>";
 		};
+		7C26A76426FF7E1B000F5984 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7C26A73126FF7731000F5984 /* AppDelegate.swift */,
+				7C26A73326FF7731000F5984 /* SceneDelegate.swift */,
+				7C26A73D26FF7733000F5984 /* Assets.xcassets */,
+				7C26A73F26FF7733000F5984 /* LaunchScreen.storyboard */,
+				7C26A76926FF7F54000F5984 /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7C26A76526FF7E51000F5984 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7C85B57B27010D58002A0C8C /* Features */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7C26A76626FF7EB0000F5984 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7C26A76726FF7EBF000F5984 /* PostsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7C26A76D26FF837D000F5984 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7C26A76E26FF8386000F5984 /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7C26A77026FFAA3F000F5984 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7C85B5782700FB63002A0C8C /* Header */,
+				7C26A77126FFAB81000F5984 /* PostTableViewCell.swift */,
+				7C26A77226FFAB81000F5984 /* PostTableViewCell.xib */,
+				7C26A77926FFD46D000F5984 /* PostUserViewCell.swift */,
+				7C26A77A26FFD46D000F5984 /* PostUserViewCell.xib */,
+				7C26A77D26FFF2A4000F5984 /* PictureViewCell.swift */,
+				7C26A77E26FFF2A4000F5984 /* PictureViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7C26A781270004A4000F5984 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				7C26A782270004C1000F5984 /* DetailPostViewController.swift */,
+				7C26A783270004C1000F5984 /* DetailPostViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		7C26A7862700AB0A000F5984 /* LocalDB */ = {
+			isa = PBXGroup;
+			children = (
+				7C26A7872700AB2A000F5984 /* DBService.swift */,
+			);
+			path = LocalDB;
+			sourceTree = "<group>";
+		};
+		7C85B5782700FB63002A0C8C /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				7C85B5752700FB42002A0C8C /* TableHeaderView.swift */,
+				7C85B5792700FB7B002A0C8C /* TableHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		7C85B57B27010D58002A0C8C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				7C26A73726FF7731000F5984 /* Main.storyboard */,
+				7C85B57C27010D61002A0C8C /* Posts */,
+				7C85B57F27010F7E002A0C8C /* Extensions */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		7C85B57C27010D61002A0C8C /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				7C26A76D26FF837D000F5984 /* Models */,
+				7C26A76626FF7EB0000F5984 /* Service */,
+				7C26A7862700AB0A000F5984 /* LocalDB */,
+				7C26A77026FFAA3F000F5984 /* Cells */,
+				7C26A73526FF7731000F5984 /* ViewController.swift */,
+				7C26A76B26FF8229000F5984 /* ViewControllerViewModel.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		7C85B57F27010F7E002A0C8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7C85B57D27010F18002A0C8C /* UITableView+Extensions.swift */,
+				7C85B58027011B2C002A0C8C /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DC996839075880D0AF26275F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1C037085C192F6EEB03D206 /* Pods_KoombeaChallengeTest.framework */,
+				A9AB56F1B32E3FAB4FA2BAC7 /* Pods_KoombeaChallengeTest_KoombeaChallengeTestUITests.framework */,
+				06137C1EB59F830EE836AB99 /* Pods_KoombeaChallengeTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +317,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C26A75B26FF7733000F5984 /* Build configuration list for PBXNativeTarget "KoombeaChallengeTest" */;
 			buildPhases = (
+				FC80BBF1A20AD420C1F50E3D /* [CP] Check Pods Manifest.lock */,
 				7C26A72A26FF7731000F5984 /* Sources */,
 				7C26A72B26FF7731000F5984 /* Frameworks */,
 				7C26A72C26FF7731000F5984 /* Resources */,
+				7681E0140B4C4D7C0F503202 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +336,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C26A75E26FF7733000F5984 /* Build configuration list for PBXNativeTarget "KoombeaChallengeTestTests" */;
 			buildPhases = (
+				15FAF282231C4A061D375535 /* [CP] Check Pods Manifest.lock */,
 				7C26A74326FF7733000F5984 /* Sources */,
 				7C26A74426FF7733000F5984 /* Frameworks */,
 				7C26A74526FF7733000F5984 /* Resources */,
@@ -173,9 +355,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C26A76126FF7733000F5984 /* Build configuration list for PBXNativeTarget "KoombeaChallengeTestUITests" */;
 			buildPhases = (
+				813E10C269D6710960D840D4 /* [CP] Check Pods Manifest.lock */,
 				7C26A74E26FF7733000F5984 /* Sources */,
 				7C26A74F26FF7733000F5984 /* Frameworks */,
 				7C26A75026FF7733000F5984 /* Resources */,
+				7AEAB98C412238BD5312B7D9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,9 +418,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C85B57A2700FB7B002A0C8C /* TableHeaderView.xib in Resources */,
 				7C26A74126FF7733000F5984 /* LaunchScreen.storyboard in Resources */,
 				7C26A73E26FF7733000F5984 /* Assets.xcassets in Resources */,
+				7C26A77426FFAB81000F5984 /* PostTableViewCell.xib in Resources */,
+				7C26A78026FFF2A4000F5984 /* PictureViewCell.xib in Resources */,
+				7C26A785270004C1000F5984 /* DetailPostViewController.xib in Resources */,
 				7C26A73926FF7731000F5984 /* Main.storyboard in Resources */,
+				7C26A77C26FFD46D000F5984 /* PostUserViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,15 +445,130 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15FAF282231C4A061D375535 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoombeaChallengeTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7681E0140B4C4D7C0F503202 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoombeaChallengeTest/Pods-KoombeaChallengeTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoombeaChallengeTest/Pods-KoombeaChallengeTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoombeaChallengeTest/Pods-KoombeaChallengeTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AEAB98C412238BD5312B7D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests/Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests/Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests/Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		813E10C269D6710960D840D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC80BBF1A20AD420C1F50E3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoombeaChallengeTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C26A72A26FF7731000F5984 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C85B57E27010F18002A0C8C /* UITableView+Extensions.swift in Sources */,
+				7C26A76C26FF8229000F5984 /* ViewControllerViewModel.swift in Sources */,
+				7C26A77F26FFF2A4000F5984 /* PictureViewCell.swift in Sources */,
+				7C26A77326FFAB81000F5984 /* PostTableViewCell.swift in Sources */,
 				7C26A73626FF7731000F5984 /* ViewController.swift in Sources */,
 				7C26A73226FF7731000F5984 /* AppDelegate.swift in Sources */,
+				7C26A784270004C1000F5984 /* DetailPostViewController.swift in Sources */,
+				7C26A76826FF7EBF000F5984 /* PostsService.swift in Sources */,
 				7C26A73C26FF7731000F5984 /* KoombeaChallengeTest.xcdatamodeld in Sources */,
+				7C85B58127011B2C002A0C8C /* Date+Extensions.swift in Sources */,
 				7C26A73426FF7731000F5984 /* SceneDelegate.swift in Sources */,
+				7C26A7882700AB2B000F5984 /* DBService.swift in Sources */,
+				7C26A77B26FFD46D000F5984 /* PostUserViewCell.swift in Sources */,
+				7C26A76A26FF7F54000F5984 /* Constants.swift in Sources */,
+				7C85B5762700FB42002A0C8C /* TableHeaderView.swift in Sources */,
+				7C26A76F26FF8386000F5984 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +741,7 @@
 		};
 		7C26A75C26FF7733000F5984 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4900FD63782C848655087362 /* Pods-KoombeaChallengeTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -456,6 +761,7 @@
 		};
 		7C26A75D26FF7733000F5984 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39CFEA5B3DDC62973405C6DE /* Pods-KoombeaChallengeTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +781,7 @@
 		};
 		7C26A75F26FF7733000F5984 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B77D541549C8E2CDC95DC58F /* Pods-KoombeaChallengeTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +804,7 @@
 		};
 		7C26A76026FF7733000F5984 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D34E16CE7A1467F25790E8A7 /* Pods-KoombeaChallengeTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +827,7 @@
 		};
 		7C26A76226FF7733000F5984 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA68344986DAE9DB72424F8E /* Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +848,7 @@
 		};
 		7C26A76326FF7733000F5984 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADD51521C6DB8D9FE4CD0513 /* Pods-KoombeaChallengeTest-KoombeaChallengeTestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

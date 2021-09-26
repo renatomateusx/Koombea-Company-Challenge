@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TableHeaderView" customModule="KoombeaChallengeTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRy-8I-USu">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Updated" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ji8-LB-FWA">
+                            <rect key="frame" x="20" y="5" width="374" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pull down to check if you have internet again and refresh data." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQQ-rB-A8O">
+                            <rect key="frame" x="10" y="27" width="394" height="13.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Ji8-LB-FWA" secondAttribute="trailing" constant="20" id="KsM-0p-sSJ"/>
+                        <constraint firstItem="Ji8-LB-FWA" firstAttribute="leading" secondItem="nRy-8I-USu" secondAttribute="leading" constant="20" id="LP3-Z0-Qdd"/>
+                        <constraint firstItem="Ji8-LB-FWA" firstAttribute="top" secondItem="nRy-8I-USu" secondAttribute="top" constant="5" id="OnN-wk-eVy"/>
+                        <constraint firstItem="nQQ-rB-A8O" firstAttribute="top" secondItem="Ji8-LB-FWA" secondAttribute="bottom" constant="5" id="bNt-Vq-BIi"/>
+                        <constraint firstItem="nQQ-rB-A8O" firstAttribute="leading" secondItem="nRy-8I-USu" secondAttribute="leading" constant="10" id="pxw-Na-kAb"/>
+                        <constraint firstAttribute="trailing" secondItem="nQQ-rB-A8O" secondAttribute="trailing" constant="10" id="sgo-jq-mfC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="nRy-8I-USu" secondAttribute="bottom" id="It5-5f-E6T"/>
+                <constraint firstAttribute="trailing" secondItem="nRy-8I-USu" secondAttribute="trailing" id="JSd-jb-j16"/>
+                <constraint firstItem="nRy-8I-USu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qNv-Yc-pkM"/>
+                <constraint firstItem="nRy-8I-USu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="s8a-c4-bQr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lastUpdateLabel" destination="Ji8-LB-FWA" id="Y49-1S-597"/>
+            </connections>
+            <point key="canvasLocation" x="89.855072463768124" y="335.82589285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
