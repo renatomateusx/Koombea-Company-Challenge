@@ -9,7 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailPostViewController" customModule="KoombeaChallengeTest" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="i5M-Pr-FkT" id="889-GR-aW7"/>
-                <outlet property="detailPostImageView" destination="cdA-Mo-vyO" id="hkh-26-hy7"/>
+                <outlet property="detailPostImageView" destination="cdA-Mo-vyO" id="JoA-Q0-Orm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

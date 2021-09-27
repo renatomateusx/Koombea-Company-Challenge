@@ -41,13 +41,17 @@ extension ViewController {
         tableView.register(UINib(nibName: TableHeaderView.identifier,
                                  bundle: nil),
                            forHeaderFooterViewReuseIdentifier: TableHeaderView.identifier)
+        
         tableView.tableFooterView = UIView()
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 600
         
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self,
                                 action: #selector(self.refresh(_:)),
                                 for: .valueChanged)
-        tableView.addSubview(refreshControl) // not required when using UITableViewController
+        tableView.addSubview(refreshControl)
+        
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -117,7 +121,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 750
+        return 600
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

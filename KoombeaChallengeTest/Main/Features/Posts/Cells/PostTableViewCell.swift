@@ -11,23 +11,25 @@ import Kingfisher
 class PostTableViewCell: UICollectionViewCell {
     
     static let identifier: String = "PostTableViewCell"
-    typealias OnDidImageTapped = ((UIImageView) -> Void)
+    typealias OnDidImageTapped = ((UIImage) -> Void)
 
     // MARK: - Outlets
-    @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var postImageView: UIImageView!
-    @IBOutlet weak var postImageHeightConstraints: NSLayoutConstraint!
-    @IBOutlet weak var twoImages: UIStackView!
     @IBOutlet weak var firstImageView: UIImageView!
     @IBOutlet weak var secondImageView: UIImageView!
-    @IBOutlet weak var threeOrMoreImagesStackView: UIStackView!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var postImageStackView: UIStackView!
+
     @IBOutlet weak var postDateLabel: UILabel!
+    @IBOutlet weak var heightPostBigImageView: NSLayoutConstraint!
+    @IBOutlet weak var twoImagesStackView: UIStackView!
+    @IBOutlet weak var threeMoreImagesStackView: UIStackView!
     
-    @IBOutlet weak var userDataContainerView: UIView!
+    
     // MARK: - Private Properties
     private var pics: [String] = []
+    private var tapBig = UITapGestureRecognizer()
+    private var tapFirst = UITapGestureRecognizer()
+    private var tapSecond = UITapGestureRecognizer()
     
     // MARK: - Public Properties
     var onDidImageTapped: OnDidImageTapped?
@@ -58,52 +60,77 @@ extension PostTableViewCell {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        let tap = UITapGestureRecognizer(target: self,
-                                         action: #selector(didTapImageView(tapGestureRecognizer:)))
         self.postImageView.isUserInteractionEnabled = true
-        self.postImageView.addGestureRecognizer(tap)
+        self.postImageView.addGestureRecognizer(tapBig)
+        self.firstImageView.isUserInteractionEnabled = true
+        self.firstImageView.addGestureRecognizer(tapFirst)
+        self.secondImageView.isUserInteractionEnabled = true
+        self.secondImageView.addGestureRecognizer(tapSecond)
     }
     
     func configure(with user: UserPosts, and post: Post, _ showTop: Bool) {
         let date = Date()
         postDateLabel.text = date.getDate(dateString: post.date)
-        let picsCount = user.posts.reduce(0) { $0 + $1.pics.count }
+        let picsCount = post.pics.count
         switch picsCount {
         case 1:
-            print("one pic")
-            self.firstImageView.isHidden = true
-            self.secondImageView.isHidden = true
+            self.twoImagesStackView.isHidden = true
+            self.heightPostBigImageView.constant = 353
             self.postImageView.isHidden = false
-            self.collectionView.isHidden = true
+            self.threeMoreImagesStackView.isHidden = true
             
             if let url = URL(string: post.pics[0]) {
                 self.postImageView.kf.setImage(with: url)
+                self.configureTapImage(for: self.postImageView, with: post.pics[0])
             }
             
         case 2:
-            print("two pics")
-            self.firstImageView.isHidden = false
-            self.secondImageView.isHidden = false
+            self.twoImagesStackView.isHidden = false
             self.postImageView.isHidden = true
-            self.collectionView.isHidden = true
+            self.threeMoreImagesStackView.isHidden = true
+            self.heightPostBigImageView.constant = 0
+            
             if let url1 = URL(string: post.pics[0]) {
                 self.firstImageView.kf.setImage(with: url1)
+                self.configureTapImage(for: self.firstImageView, with: post.pics[0])
             }
             
             if let url2 = URL(string: post.pics[1]) {
                 self.secondImageView.kf.setImage(with: url2)
+                self.configureTapImage(for: self.secondImageView, with: post.pics[1])
+            }
+        case 3:
+            self.twoImagesStackView.isHidden = false
+            self.postImageView.isHidden = false
+            self.threeMoreImagesStackView.isHidden = true
+            self.heightPostBigImageView.constant = 0
+            
+            if let url1 = URL(string: post.pics[1]) {
+                self.firstImageView.kf.setImage(with: url1)
+                self.configureTapImage(for: self.firstImageView, with: post.pics[0])
+            }
+            
+            if let url2 = URL(string: post.pics[2]) {
+                self.secondImageView.kf.setImage(with: url2)
+                self.configureTapImage(for: self.secondImageView, with: post.pics[1])
+            }
+            
+            if let url3 = URL(string: post.pics[0]) {
+                self.postImageView.kf.setImage(with: url3)
+                self.configureTapImage(for: self.postImageView, with: post.pics[0])
             }
         default:
-            if post.pics.count >= 3 {
-                print("three or more pics")
-                self.firstImageView.isHidden = true
-                self.secondImageView.isHidden = true
+            if picsCount >= 3 {
+                self.twoImagesStackView.isHidden = true
                 self.postImageView.isHidden = false
-                self.collectionView.isHidden = false
+                self.heightPostBigImageView.constant = 353
+                self.threeMoreImagesStackView.isHidden = false
+                
                 if let url = URL(string: post.pics[0]) {
                     self.postImageView.kf.setImage(with: url)
+                    self.configureTapImage(for: self.postImageView, with: post.pics[0])
                 }
-                for i in (1...post.pics.count - 1) {
+                for i in (0...picsCount-1) {
                     self.pics.append(post.pics[i])
                 }
                 collectionView.reloadData()
@@ -130,7 +157,7 @@ extension PostTableViewCell: UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 171, height: 171)
+        return CGSize(width: 132, height: 132)
     }
 }
 
@@ -138,8 +165,18 @@ extension PostTableViewCell: UICollectionViewDelegate,
 // MARK: - Actions
 
 extension PostTableViewCell {
-    @objc func didTapImageView(tapGestureRecognizer: UITapGestureRecognizer) {
-        let tappedImage = tapGestureRecognizer.view as! UIImageView
-        self.onDidImageTapped?(tappedImage)
+    #warning("TODO: Needs to improve here")
+    func configureTapImage(for imageView: UIImageView, with url: String) {
+        let tapImage = UITapGestureRecognizer(target: self,
+                                         action: #selector(didTapImageView(tapGesture:)))
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(tapImage)
+    }
+    
+    @objc func didTapImageView(tapGesture: UITapGestureRecognizer) {
+        let image = tapGesture.view as! UIImageView
+        if let image = image.image {
+            self.onDidImageTapped?(image)
+        }
     }
 }

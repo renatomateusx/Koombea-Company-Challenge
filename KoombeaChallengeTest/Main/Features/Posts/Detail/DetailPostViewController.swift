@@ -10,12 +10,14 @@ import UIKit
 class DetailPostViewController: UIViewController {
 
     // MARK: - Outlets
-    @IBOutlet weak var detailPostImageView: UIImageView!
+    @IBOutlet var detailPostImageView: UIImageView!
     @IBOutlet var containerView: UIView!
     
+    private let image: UIImage
+    
     // MARK: - Inits
-    init(with image: UIImageView) {
-        self.detailPostImageView = image
+    init(with image: UIImage) {
+        self.image = image
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -41,6 +43,7 @@ class DetailPostViewController: UIViewController {
                                                  action: #selector(respondToSwipeGesture))
             swipeDown.direction = .down
             self.view.addGestureRecognizer(swipeDown)
+        self.detailPostImageView.image = image
     }
     
     func afterInit() {

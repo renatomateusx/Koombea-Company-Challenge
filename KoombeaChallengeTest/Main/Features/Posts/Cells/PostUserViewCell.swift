@@ -10,7 +10,7 @@ import UIKit
 class PostUserViewCell: UITableViewCell {
     
     static let identifier: String = "PostUserViewCell"
-    typealias OnDidTapImage = ((UIImageView) -> Void)
+    typealias OnDidTapImage = ((UIImage) -> Void)
     
     // MARK: - Outlets
     
@@ -21,7 +21,13 @@ class PostUserViewCell: UITableViewCell {
     @IBOutlet weak var postedDateLabel: UILabel!
     
     // MARK: - Private Properties
-    private var userPost: UserPosts?
+    private var userPost: UserPosts? {
+        didSet {
+            if let userPost = self.userPost {
+                self.configureData(userPost)
+            }
+        }
+    }
     private var showTop: Bool = false
     private var posts: [Post] = [] {
         didSet {
@@ -79,7 +85,6 @@ extension PostUserViewCell: UICollectionViewDelegate,
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostTableViewCell.identifier,
                                                             for: indexPath) as? PostTableViewCell,
               let userPost = self.userPost else { return  UICollectionViewCell() }
-        self.configureData(userPost)
         cell.configure(with: userPost, and: self.posts[indexPath.row], showTop)
         cell.onDidImageTapped = { [weak self] imageView in
             self?.onDidTapImage?(imageView)
@@ -92,11 +97,11 @@ extension PostUserViewCell: UICollectionViewDelegate,
         let width = collectionView.frame.size.width
         switch picsCount {
         case 1:
-            return CGSize(width: width, height: 750)
+            return CGSize(width: width, height: 393)
         case 2:
-            return CGSize(width: width, height: 750)
+            return CGSize(width: width, height: 300)
         default:
-            return CGSize(width: width, height: 750)
+            return CGSize(width: width, height: 595)
         }
         
     }

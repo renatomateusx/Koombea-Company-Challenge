@@ -12,7 +12,6 @@ target 'KoombeaChallengeTest' do
     # Pods for testing
   end
   pod 'Alamofire'
-  pod 'SDWebImage', '~> 5.0'
   pod 'CouchbaseLite-Swift', '~> 2.8'
   pod 'Kingfisher', '~> 4.0'
 

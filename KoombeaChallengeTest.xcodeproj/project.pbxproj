@@ -165,7 +165,6 @@
 		7C26A73026FF7731000F5984 /* KoombeaChallengeTest */ = {
 			isa = PBXGroup;
 			children = (
-				7C26A781270004A4000F5984 /* Detail */,
 				7C26A76526FF7E51000F5984 /* Main */,
 				7C26A76426FF7E1B000F5984 /* Resources */,
 				7C26A73A26FF7731000F5984 /* KoombeaChallengeTest.xcdatamodeld */,
@@ -281,6 +280,7 @@
 		7C85B57C27010D61002A0C8C /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				7C26A781270004A4000F5984 /* Detail */,
 				7C26A76D26FF837D000F5984 /* Models */,
 				7C26A76626FF7EB0000F5984 /* Service */,
 				7C26A7862700AB0A000F5984 /* LocalDB */,
