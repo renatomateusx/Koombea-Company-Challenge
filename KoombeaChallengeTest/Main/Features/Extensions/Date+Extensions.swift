@@ -15,12 +15,16 @@ extension Date {
         dateFormatterGet.timeZone = TimeZone(abbreviation: "GMT")
 
         let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "MMM dd\(daySuffix())"
-
+        dateFormatterPrint.dateFormat = dateFormat()
+        
         let date: Date? = dateFormatterGet.date(from: dateString)
         let formatedDate = dateFormatterPrint.string(from: date!)
-        
+
         return formatedDate
+    }
+    
+    func dateFormat() -> String {
+        return "MMM dd'\(daySuffix())'"
     }
     
     func daySuffix() -> String {

@@ -43,8 +43,9 @@ extension ViewController {
                            forHeaderFooterViewReuseIdentifier: TableHeaderView.identifier)
         
         tableView.tableFooterView = UIView()
+        tableView.showsVerticalScrollIndicator = false
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 700
+//        tableView.estimatedRowHeight = 700
         
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self,

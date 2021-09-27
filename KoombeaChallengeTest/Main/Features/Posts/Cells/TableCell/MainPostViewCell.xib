@@ -58,7 +58,7 @@
                                     <constraint firstItem="1de-H3-Mqc" firstAttribute="leading" secondItem="hUQ-fg-b0V" secondAttribute="leading" constant="100" id="ttY-TU-1bJ"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="veR-tB-MC5">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="veR-tB-MC5">
                                 <rect key="frame" x="0.0" y="55" width="320" height="582"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b4z-Nu-kEJ">
