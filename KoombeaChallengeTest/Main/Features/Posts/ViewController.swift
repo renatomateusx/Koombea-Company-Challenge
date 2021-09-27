@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
     
@@ -15,7 +16,6 @@ class ViewController: UIViewController {
     // MARK: - Private Properties
     private let viewModel = ViewControllerViewModel()
     private var dataSource: [UserPosts] = []
-    private var currentUserPost: UserPosts?
     private var posts: [Post] = []
     private var isOffLine: Bool = false
     private var lastUpdated: String?
@@ -35,16 +35,16 @@ extension ViewController {
         tableView.separatorStyle = .none
         tableView.backgroundColor = .white
        
-        tableView.register(UINib(nibName: PostUserViewCell.identifier,
+        tableView.register(UINib(nibName: MainPostViewCell.identifier,
                                  bundle: nil),
-                           forCellReuseIdentifier: PostUserViewCell.identifier)
+                           forCellReuseIdentifier: MainPostViewCell.identifier)
         tableView.register(UINib(nibName: TableHeaderView.identifier,
                                  bundle: nil),
                            forHeaderFooterViewReuseIdentifier: TableHeaderView.identifier)
         
         tableView.tableFooterView = UIView()
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 600
+        tableView.estimatedRowHeight = 700
         
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self,
@@ -88,7 +88,7 @@ extension ViewController {
 
 // MARK: - TableViewDataSource
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -100,13 +100,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let userPosts = self.dataSource[indexPath.row]
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PostUserViewCell.identifier,
-                                                       for: indexPath) as? PostUserViewCell else { return UITableViewCell() }
-        var showTop: Bool = true
-        if let currentUserPost = self.currentUserPost {
-            showTop = (currentUserPost.uid == userPosts.uid)
-        }
-        cell.configure(with: userPosts, !showTop)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainPostViewCell.identifier,
+                                                       for: indexPath) as? MainPostViewCell else { return UITableViewCell() }
+        cell.configure(with: userPosts)
         cell.onDidTapImage = { [weak self] imageView in
             guard let self = self else { return }
             let vc = DetailPostViewController(with: imageView)
@@ -116,13 +112,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 navigationController.present(vc, animated: true)
             }
         }
-        self.currentUserPost = userPosts
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 600
-    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if isOffLine {
