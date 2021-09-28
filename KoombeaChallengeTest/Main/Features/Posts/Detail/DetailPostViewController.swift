@@ -29,13 +29,17 @@ class DetailPostViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         afterInit()
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     func setupUI() {
@@ -47,12 +51,12 @@ class DetailPostViewController: UIViewController {
     }
     
     func afterInit() {
-        view.backgroundColor = .clear
-        
-        let blurEffect = UIBlurEffect(style: .light)
-        let customBlurEffectView = UIVisualEffectView(effect: blurEffect)
+        let blurEffect: UIBlurEffect = UIBlurEffect(style: .light)
+        let customBlurEffectView: UIVisualEffectView = UIVisualEffectView(effect: blurEffect)
         customBlurEffectView.translatesAutoresizingMaskIntoConstraints = false
         view.insertSubview(customBlurEffectView, at: 0)
+        
+        /// - Constraints
         NSLayoutConstraint.activate([
             customBlurEffectView.topAnchor.constraint(equalTo: view.topAnchor),
             customBlurEffectView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -65,14 +69,9 @@ class DetailPostViewController: UIViewController {
 extension DetailPostViewController {
     @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
 
-        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-
-            switch swipeGesture.direction {
-            case .down:
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer,
+           case .down = swipeGesture.direction {
                 self.dismiss(animated: true, completion: nil)
-            default:
-                break
-            }
         }
     }
 }
