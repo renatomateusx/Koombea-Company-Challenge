@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="637"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="evU-mg-a7G">
+                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="evU-mg-a7G">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="637"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUQ-fg-b0V">
@@ -60,21 +60,6 @@
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="veR-tB-MC5">
                                 <rect key="frame" x="0.0" y="60" width="320" height="577"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b4z-Nu-kEJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="577"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="577" id="QOb-9H-IRg"/>
-                                        </constraints>
-                                    </tableView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="b4z-Nu-kEJ" firstAttribute="leading" secondItem="veR-tB-MC5" secondAttribute="leading" id="LeA-D3-gLU"/>
-                                    <constraint firstAttribute="bottom" secondItem="b4z-Nu-kEJ" secondAttribute="bottom" id="U84-7L-qP5"/>
-                                    <constraint firstItem="b4z-Nu-kEJ" firstAttribute="top" secondItem="veR-tB-MC5" secondAttribute="top" id="dXw-ym-TPr"/>
-                                    <constraint firstAttribute="trailing" secondItem="b4z-Nu-kEJ" secondAttribute="trailing" id="eZ5-NR-rj1"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <constraints>
@@ -84,12 +69,20 @@
                             <constraint firstItem="hUQ-fg-b0V" firstAttribute="top" secondItem="evU-mg-a7G" secondAttribute="top" id="yRF-JB-OkM"/>
                         </constraints>
                     </stackView>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b4z-Nu-kEJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="637"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </tableView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="b4z-Nu-kEJ" secondAttribute="bottom" id="3R1-vQ-JaD"/>
                     <constraint firstAttribute="trailing" secondItem="evU-mg-a7G" secondAttribute="trailing" id="7fH-Dm-qI2"/>
                     <constraint firstAttribute="bottom" secondItem="evU-mg-a7G" secondAttribute="bottom" id="Jtv-PO-kFV"/>
                     <constraint firstItem="evU-mg-a7G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LUr-Qx-x1Q"/>
+                    <constraint firstItem="b4z-Nu-kEJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LdR-N7-jxg"/>
+                    <constraint firstItem="b4z-Nu-kEJ" firstAttribute="leading" secondItem="evU-mg-a7G" secondAttribute="leading" id="nfc-wL-wD0"/>
                     <constraint firstItem="evU-mg-a7G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="t25-f4-wfd"/>
+                    <constraint firstItem="b4z-Nu-kEJ" firstAttribute="trailing" secondItem="evU-mg-a7G" secondAttribute="trailing" id="xVt-Wz-Wr8"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

@@ -44,8 +44,6 @@ extension ViewController {
         
         tableView.tableFooterView = UIView()
         tableView.showsVerticalScrollIndicator = false
-        tableView.rowHeight = UITableView.automaticDimension
-//        tableView.estimatedRowHeight = 700
         
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self,
@@ -100,10 +98,10 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let userPosts = self.dataSource[indexPath.row]
+        let userPost = self.dataSource[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MainPostViewCell.identifier,
                                                        for: indexPath) as? MainPostViewCell else { return UITableViewCell() }
-        cell.configure(with: userPosts)
+        cell.configure(with: userPost)
         cell.onDidTapImage = { [weak self] imageView in
             guard let self = self else { return }
             let vc = DetailPostViewController(with: imageView)
@@ -114,6 +112,16 @@ extension ViewController: UITableViewDataSource {
             }
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let userPost = self.dataSource[indexPath.row]
+        let height = viewModel.calculateCell(userPost: userPost)
+        return height
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
 

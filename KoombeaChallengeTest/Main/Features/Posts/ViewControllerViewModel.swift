@@ -5,6 +5,7 @@
 //  Created by Renato Mateus De Moura Santos on 25/09/21.
 //
 
+import UIKit
 import Foundation
 
 class ViewControllerViewModel {
@@ -36,5 +37,26 @@ class ViewControllerViewModel {
                 }
             }
         }
+    }
+}
+
+// MARK: - Helpers
+extension ViewControllerViewModel {
+    func calculateCell(userPost: UserPosts) -> CGFloat {
+        var height: CGFloat = 0
+        let posts = userPost.posts
+        for post in posts {
+            switch post.pics.count {
+            case 1:
+                height += 393
+            case 2:
+                height += 191
+            case 3:
+                height += 577
+            default:
+                height += 595
+            }
+        }
+        return height
     }
 }
