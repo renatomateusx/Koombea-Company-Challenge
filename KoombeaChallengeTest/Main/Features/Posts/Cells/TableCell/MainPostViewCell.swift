@@ -20,6 +20,7 @@ class MainPostViewCell: UITableViewCell {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Private Properties
+    private let viewModel = ViewControllerViewModel()
     private var userPost: UserPosts?
     private var posts: [Post] = []
     
@@ -122,13 +123,13 @@ extension MainPostViewCell: UITableViewDataSource {
         let picsCount = self.posts[indexPath.row].pics.count
         switch picsCount {
         case 1:
-            return 393
+            return viewModel.oneBigImageHeight
         case 2:
-            return 191
+            return viewModel.twoSmallImagesHeight
         case 3:
-            return 577
+            return viewModel.threeImagesHeight
         default:
-            return 595
+            return viewModel.fourMoreImagesHeight
         }
     }
 }

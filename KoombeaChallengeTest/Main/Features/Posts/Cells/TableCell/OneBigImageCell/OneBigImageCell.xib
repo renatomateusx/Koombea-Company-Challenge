@@ -12,21 +12,21 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="406" id="KGk-i7-Jjw" customClass="OneBigImageCell" customModule="KoombeaChallengeTest" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="392" height="406"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="392" height="406"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 21st" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5e-ug-gel">
-                        <rect key="frame" x="11" y="0.0" width="370" height="40"/>
+                        <rect key="frame" x="11" y="5" width="370" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="b6b-SH-7n1"/>
+                            <constraint firstAttribute="height" constant="20" id="b6b-SH-7n1"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigPic" translatesAutoresizingMaskIntoConstraints="NO" id="sgR-oy-30t" userLabel="postImageView">
-                        <rect key="frame" x="11" y="40" width="370" height="353"/>
+                        <rect key="frame" x="11" y="36" width="370" height="353"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="353" id="3nJ-e0-ovZ"/>
                         </constraints>
@@ -34,12 +34,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="sgR-oy-30t" secondAttribute="trailing" constant="11" id="D2u-ei-85z"/>
-                    <constraint firstItem="t5e-ug-gel" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UXa-vH-neh"/>
-                    <constraint firstAttribute="bottom" secondItem="sgR-oy-30t" secondAttribute="bottom" id="jaB-MI-edM"/>
+                    <constraint firstItem="t5e-ug-gel" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="UXa-vH-neh"/>
                     <constraint firstItem="sgR-oy-30t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="kMJ-cP-GuA"/>
                     <constraint firstItem="t5e-ug-gel" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="kSt-gI-MWg"/>
                     <constraint firstAttribute="trailing" secondItem="t5e-ug-gel" secondAttribute="trailing" constant="11" id="m4w-vA-ZHr"/>
-                    <constraint firstItem="sgR-oy-30t" firstAttribute="top" secondItem="t5e-ug-gel" secondAttribute="bottom" id="mL9-En-3XD"/>
+                    <constraint firstItem="sgR-oy-30t" firstAttribute="top" secondItem="t5e-ug-gel" secondAttribute="bottom" constant="11" id="mL9-En-3XD"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

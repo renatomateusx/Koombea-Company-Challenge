@@ -18,6 +18,11 @@ class ViewControllerViewModel {
     // MARK: - Public Properties
     var onFailureFetchingPost: OnFailureFetchingPost?
     var onSuccessFetchingPost: OnSuccessFetchingPost?
+    let oneBigImageHeight: CGFloat = 390
+    let twoSmallImagesHeight: CGFloat = 191
+    let threeImagesHeight: CGFloat = 577
+    let fourMoreImagesHeight: CGFloat = 595
+    let viewUserDataHeight: CGFloat = 55
     
     func fetchPosts() {
         PostsService.instance.fetchPosts { result in
@@ -48,15 +53,15 @@ extension ViewControllerViewModel {
         for post in posts {
             switch post.pics.count {
             case 1:
-                height += 393
+                height += oneBigImageHeight
             case 2:
-                height += 191
+                height += twoSmallImagesHeight
             case 3:
-                height += 577
+                height += threeImagesHeight
             default:
-                height += 595
+                height += fourMoreImagesHeight
             }
         }
-        return height + 55
+        return height + viewUserDataHeight
     }
 }

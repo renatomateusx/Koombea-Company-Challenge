@@ -17,9 +17,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 21st" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqG-aF-y4N">
-                        <rect key="frame" x="11" y="0.0" width="353" height="40"/>
+                        <rect key="frame" x="11" y="5" width="353" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="czl-5i-deh"/>
+                            <constraint firstAttribute="height" constant="20" id="czl-5i-deh"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="wZk-mR-uGy"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -27,13 +27,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigPic" translatesAutoresizingMaskIntoConstraints="NO" id="rmL-lZ-Ck0" userLabel="postImageView">
-                        <rect key="frame" x="11" y="38" width="353" height="353"/>
+                        <rect key="frame" x="11" y="36" width="353" height="353"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="353" id="MeN-gJ-FfQ"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="alb-l6-s5H">
-                        <rect key="frame" x="11" y="402" width="353" height="171"/>
+                        <rect key="frame" x="11" y="400" width="353" height="171"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F0i-hd-zbP" userLabel="First Image Viw">
                                 <rect key="frame" x="0.0" y="0.0" width="171" height="171"/>
@@ -53,11 +53,11 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="gqG-aF-y4N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3l1-gJ-Nvw"/>
+                    <constraint firstItem="gqG-aF-y4N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="3l1-gJ-Nvw"/>
                     <constraint firstAttribute="trailing" secondItem="rmL-lZ-Ck0" secondAttribute="trailing" constant="11" id="Dt5-i6-J5r"/>
                     <constraint firstItem="alb-l6-s5H" firstAttribute="top" secondItem="rmL-lZ-Ck0" secondAttribute="bottom" constant="11" id="Hbv-N1-Wlu"/>
                     <constraint firstAttribute="trailing" secondItem="gqG-aF-y4N" secondAttribute="trailing" constant="11" id="IeJ-69-X0J"/>
-                    <constraint firstItem="rmL-lZ-Ck0" firstAttribute="top" secondItem="gqG-aF-y4N" secondAttribute="bottom" constant="-2" id="LkB-So-qcW"/>
+                    <constraint firstItem="rmL-lZ-Ck0" firstAttribute="top" secondItem="gqG-aF-y4N" secondAttribute="bottom" constant="11" id="LkB-So-qcW"/>
                     <constraint firstItem="alb-l6-s5H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="LnY-QP-nPm"/>
                     <constraint firstAttribute="trailing" secondItem="alb-l6-s5H" secondAttribute="trailing" constant="11" id="P7b-XG-Nqe"/>
                     <constraint firstItem="gqG-aF-y4N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="byx-Tz-c3c"/>

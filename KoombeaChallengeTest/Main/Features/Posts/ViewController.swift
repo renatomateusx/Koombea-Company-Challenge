@@ -45,7 +45,6 @@ extension ViewController {
         tableView.tableFooterView = UIView()
         tableView.showsVerticalScrollIndicator = false
         
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self,
                                 action: #selector(self.refresh(_:)),
                                 for: .valueChanged)
@@ -118,10 +117,6 @@ extension ViewController: UITableViewDataSource {
         let userPost = self.dataSource[indexPath.row]
         let height = viewModel.calculateCell(userPost: userPost)
         return height
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
     }
 }
 

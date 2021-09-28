@@ -18,22 +18,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 21st" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zf7-49-HiA">
-                        <rect key="frame" x="11" y="5" width="386" height="40"/>
+                        <rect key="frame" x="11" y="5" width="386" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="MnP-ox-SsV"/>
+                            <constraint firstAttribute="height" constant="20" id="MnP-ox-SsV"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigPic" translatesAutoresizingMaskIntoConstraints="NO" id="BDX-eQ-d1U" userLabel="postImageView">
-                        <rect key="frame" x="11" y="50" width="386" height="353"/>
+                        <rect key="frame" x="11" y="36" width="386" height="353"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="353" id="fux-Hm-pWa"/>
                         </constraints>
                     </imageView>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kVX-VB-HdE">
-                        <rect key="frame" x="11" y="414" width="386" height="121"/>
+                        <rect key="frame" x="11" y="400" width="386" height="135"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rqb-fQ-g5P">
                             <size key="itemSize" width="128" height="128"/>
@@ -53,7 +53,7 @@
                     <constraint firstItem="kVX-VB-HdE" firstAttribute="top" secondItem="BDX-eQ-d1U" secondAttribute="bottom" constant="11" id="c0h-Ft-CoF"/>
                     <constraint firstAttribute="trailing" secondItem="kVX-VB-HdE" secondAttribute="trailing" constant="11" id="jsU-1j-gnk"/>
                     <constraint firstItem="Zf7-49-HiA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="kcy-bx-HLj"/>
-                    <constraint firstItem="BDX-eQ-d1U" firstAttribute="top" secondItem="Zf7-49-HiA" secondAttribute="bottom" constant="5" id="rvE-wB-MaZ"/>
+                    <constraint firstItem="BDX-eQ-d1U" firstAttribute="top" secondItem="Zf7-49-HiA" secondAttribute="bottom" constant="11" id="rvE-wB-MaZ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
