@@ -1,7 +1,7 @@
 # Koombea-Company-Challenge
 Project made as a challenge for Koombea Company
 
-Used:
+# Used:
 KingFisher<br/>
 Alamofire<br/>
 CouchbaseLite-Swift<br/>
