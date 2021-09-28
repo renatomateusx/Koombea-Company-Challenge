@@ -57,6 +57,6 @@ extension ViewControllerViewModel {
                 height += 595
             }
         }
-        return height
+        return height + 55
     }
 }
