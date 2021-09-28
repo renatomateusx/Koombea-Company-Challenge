@@ -1,5 +1,5 @@
 //
-//  Posts.swift
+//  PostsService.swift
 //  KoombeaChallengeTest
 //
 //  Created by Renato Mateus De Moura Santos on 25/09/21.
@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class PostsService {
-    static let instance = PostsService()
+    static let shared = PostsService()
     
     func fetchPosts(completion: @escaping(Result<DataPosts, Error>) -> Void) {
         let request = AF.request(Constants.postsURL)
@@ -22,11 +22,6 @@ class PostsService {
                                                          from: response.data!)
                     
                     completion(.success(model))
-                    
-                    /// SIMULATE NO INTERNET - I DIDN'T DO THE UNIT TESTS YET
-//                    completion(.failure(NSError(domain:"",
-//                                              code:400,
-//                                              userInfo:nil)))
                 } catch {
                     completion(Result.failure(error))
                 }

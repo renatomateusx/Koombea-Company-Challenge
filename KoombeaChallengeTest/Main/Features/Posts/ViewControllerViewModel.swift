@@ -25,7 +25,7 @@ class ViewControllerViewModel {
     let viewUserDataHeight: CGFloat = 55
     
     func fetchPosts() {
-        PostsService.instance.fetchPosts { result in
+        PostsService.shared.fetchPosts { result in
             switch result {
             
             case .success(let posts):
