@@ -61,6 +61,7 @@
 		41A41B6E270342DA0099D809 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41A41B3A270342DA0099D809 /* RobotoCondensed-Light.ttf */; };
 		41A41B6F270342DA0099D809 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41A41B3A270342DA0099D809 /* RobotoCondensed-Light.ttf */; };
 		41A41B70270342DA0099D809 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41A41B3A270342DA0099D809 /* RobotoCondensed-Light.ttf */; };
+		41A41B74270385510099D809 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A41B73270385510099D809 /* SceneDelegate.swift */; };
 		41B960D3270211690028B439 /* OneBigImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B960D1270211690028B439 /* OneBigImageCell.swift */; };
 		41B960D4270211690028B439 /* OneBigImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B960D2270211690028B439 /* OneBigImageCell.xib */; };
 		41B960D727023AE10028B439 /* TwoSmallImagesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B960D527023AE10028B439 /* TwoSmallImagesViewCell.swift */; };
@@ -71,7 +72,6 @@
 		41B960E027024B890028B439 /* FourMoreImagesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B960DE27024B890028B439 /* FourMoreImagesViewCell.xib */; };
 		44695B48CF9F431A0D01F246 /* Pods_KoombeaChallengeTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06137C1EB59F830EE836AB99 /* Pods_KoombeaChallengeTestTests.framework */; };
 		7C26A73226FF7731000F5984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A73126FF7731000F5984 /* AppDelegate.swift */; };
-		7C26A73426FF7731000F5984 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A73326FF7731000F5984 /* SceneDelegate.swift */; };
 		7C26A73626FF7731000F5984 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A73526FF7731000F5984 /* ViewController.swift */; };
 		7C26A73926FF7731000F5984 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C26A73726FF7731000F5984 /* Main.storyboard */; };
 		7C26A73C26FF7731000F5984 /* KoombeaChallengeTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A73A26FF7731000F5984 /* KoombeaChallengeTest.xcdatamodeld */; };
@@ -136,6 +136,7 @@
 		41A41B38270342DA0099D809 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		41A41B39270342DA0099D809 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		41A41B3A270342DA0099D809 /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
+		41A41B73270385510099D809 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		41B960D1270211690028B439 /* OneBigImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBigImageCell.swift; sourceTree = "<group>"; };
 		41B960D2270211690028B439 /* OneBigImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneBigImageCell.xib; sourceTree = "<group>"; };
 		41B960D527023AE10028B439 /* TwoSmallImagesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSmallImagesViewCell.swift; sourceTree = "<group>"; };
@@ -147,7 +148,6 @@
 		4900FD63782C848655087362 /* Pods-KoombeaChallengeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoombeaChallengeTest.debug.xcconfig"; path = "Target Support Files/Pods-KoombeaChallengeTest/Pods-KoombeaChallengeTest.debug.xcconfig"; sourceTree = "<group>"; };
 		7C26A72E26FF7731000F5984 /* KoombeaChallengeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoombeaChallengeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C26A73126FF7731000F5984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C26A73326FF7731000F5984 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7C26A73526FF7731000F5984 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7C26A73826FF7731000F5984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C26A73B26FF7731000F5984 /* KoombeaChallengeTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KoombeaChallengeTest.xcdatamodel; sourceTree = "<group>"; };
@@ -339,9 +339,9 @@
 			children = (
 				41A41B162703428D0099D809 /* Fonts */,
 				7C26A73126FF7731000F5984 /* AppDelegate.swift */,
-				7C26A73326FF7731000F5984 /* SceneDelegate.swift */,
 				7C26A73D26FF7733000F5984 /* Assets.xcassets */,
 				7C26A76926FF7F54000F5984 /* Constants.swift */,
+				41A41B73270385510099D809 /* SceneDelegate.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -760,13 +760,13 @@
 				7C26A76826FF7EBF000F5984 /* PostsService.swift in Sources */,
 				7C26A73C26FF7731000F5984 /* KoombeaChallengeTest.xcdatamodeld in Sources */,
 				7C85B58127011B2C002A0C8C /* Date+Extensions.swift in Sources */,
-				7C26A73426FF7731000F5984 /* SceneDelegate.swift in Sources */,
 				7C26A7882700AB2B000F5984 /* DBService.swift in Sources */,
 				7C26A77B26FFD46D000F5984 /* MainPostViewCell.swift in Sources */,
 				7C26A76A26FF7F54000F5984 /* Constants.swift in Sources */,
 				41B960DF27024B890028B439 /* FourMoreImagesViewCell.swift in Sources */,
 				7C85B5762700FB42002A0C8C /* TableHeaderView.swift in Sources */,
 				7C26A76F26FF8386000F5984 /* Post.swift in Sources */,
+				41A41B74270385510099D809 /* SceneDelegate.swift in Sources */,
 				41B960DB270243DF0028B439 /* ThreeImagesViewCell.swift in Sources */,
 				41B960D727023AE10028B439 /* TwoSmallImagesViewCell.swift in Sources */,
 			);
