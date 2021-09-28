@@ -12,10 +12,10 @@ protocol ThreeImagesViewCellDelegate: AnyObject {
 }
 
 class ThreeImagesViewCell: UITableViewCell {
-
+    
     // MARK: - Identifier
     static let identifier: String = "ThreeImagesViewCell"
-
+    
     // MARK: - Outlets
     @IBOutlet weak var postDateLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
@@ -34,17 +34,15 @@ class ThreeImagesViewCell: UITableViewCell {
         super.awakeFromNib()
         backgroundColor = .orange
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
 }
 
+// MARK: - Setup Data
+
 extension ThreeImagesViewCell {
-    func configure(with post: Post) {
-        self.post = post
-    }
-    
     func setupData() {
         let date = Date()
         if let postedDate = self.post?.date {
@@ -70,16 +68,24 @@ extension ThreeImagesViewCell {
     }
 }
 
-// MARK: - Actions
+// MARK: - Cell Configuration
 
 extension ThreeImagesViewCell {
+    func configure(with post: Post) {
+        self.post = post
+    }
+    
     func configureImageTapped(_ imageView: UIImageView) {
         let tap = UITapGestureRecognizer(target: self,
                                          action: #selector(didTappedImage(tapGesture:)))
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(tap)
     }
-    
+}
+
+// MARK: - Actions
+
+extension ThreeImagesViewCell {
     @objc func didTappedImage(tapGesture: UITapGestureRecognizer) {
         let imageView = tapGesture.view as! UIImageView
         if let image = imageView.image {

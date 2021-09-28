@@ -12,10 +12,10 @@ protocol TwoSmallImagesViewCellDelegate: AnyObject {
 }
 
 class TwoSmallImagesViewCell: UITableViewCell {
-
+    
     // MARK: - Identifier
     static let identifier: String = "TwoSmallImagesViewCell"
-
+    
     // MARK: - Outlets
     @IBOutlet weak var postDateLabel: UILabel!
     @IBOutlet weak var firstImageView: UIImageView!
@@ -33,17 +33,15 @@ class TwoSmallImagesViewCell: UITableViewCell {
         super.awakeFromNib()
         backgroundColor = .green
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
 }
 
+// MARK: - Setup Data
+
 extension TwoSmallImagesViewCell {
-    func configure(with post: Post) {
-        self.post = post
-    }
-    
     func setupData() {
         let date = Date()
         if let postedDate = self.post?.date {
@@ -63,15 +61,24 @@ extension TwoSmallImagesViewCell {
     }
 }
 
-// MARK: - Actions
+// MARK: - Cell Configuration
 
 extension TwoSmallImagesViewCell {
+    func configure(with post: Post) {
+        self.post = post
+    }
+    
     func configureImageTapped(_ imageView: UIImageView) {
         let tap = UITapGestureRecognizer(target: self,
                                          action: #selector(didTappedImage(tapGesture:)))
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(tap)
     }
+}
+
+// MARK: - Actions
+
+extension TwoSmallImagesViewCell {
     
     @objc func didTappedImage(tapGesture: UITapGestureRecognizer) {
         let imageView = tapGesture.view as! UIImageView

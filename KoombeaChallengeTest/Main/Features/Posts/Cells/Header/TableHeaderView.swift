@@ -20,6 +20,8 @@ class TableHeaderView: UITableViewHeaderFooterView {
     }
 }
 
+// MARK: - Header Configuration
+
 extension TableHeaderView {
     func configure(with data: String) {
         lastUpdateLabel.text = "Last updated: \(data)"

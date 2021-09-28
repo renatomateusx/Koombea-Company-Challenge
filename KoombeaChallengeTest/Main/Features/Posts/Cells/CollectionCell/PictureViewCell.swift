@@ -26,6 +26,8 @@ class PictureViewCell: UICollectionViewCell {
     }
 }
 
+// MARK: - Configuration
+
 extension PictureViewCell {
     func configure(with pic: String) {
         if let url = URL(string: pic) {
@@ -33,15 +35,17 @@ extension PictureViewCell {
             self.configureImageTapped()
         }
     }
-}
-
-extension PictureViewCell {
+    
     func configureImageTapped() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTappedImage(tapGesture:)))
         self.pictureImageView.isUserInteractionEnabled = true
         self.pictureImageView.addGestureRecognizer(tap)
     }
-    
+}
+
+// MARK: - Actions
+
+extension PictureViewCell {
     @objc func didTappedImage(tapGesture: UITapGestureRecognizer) {
         let imageView = tapGesture.view as! UIImageView
         if let image = imageView.image {

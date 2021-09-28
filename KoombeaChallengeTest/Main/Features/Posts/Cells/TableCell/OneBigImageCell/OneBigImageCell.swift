@@ -15,7 +15,7 @@ class OneBigImageCell: UITableViewCell {
     
     // MARK: - Identifier
     static let identifier: String = "OneBigImageCell"
-
+    
     // MARK: - Outlets
     @IBOutlet weak var postDateLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
@@ -32,16 +32,15 @@ class OneBigImageCell: UITableViewCell {
         super.awakeFromNib()
         backgroundColor = .red
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
 }
 
+// MARK: - Setup Data
+
 extension OneBigImageCell {
-    func configure(with post: Post) {
-        self.post = post
-    }
     
     func setupData() {
         let date = Date()
@@ -56,14 +55,23 @@ extension OneBigImageCell {
     }
 }
 
-// MARK: - Actions
+// MARK: - Cell Configuration
 
 extension OneBigImageCell {
+    func configure(with post: Post) {
+        self.post = post
+    }
+    
     func configureImageTapped() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTappedImage(tapGesture:)))
         self.postImageView.isUserInteractionEnabled = true
         self.postImageView.addGestureRecognizer(tap)
     }
+}
+
+// MARK: - Actions
+
+extension OneBigImageCell {
     
     @objc func didTappedImage(tapGesture: UITapGestureRecognizer) {
         let imageView = tapGesture.view as! UIImageView

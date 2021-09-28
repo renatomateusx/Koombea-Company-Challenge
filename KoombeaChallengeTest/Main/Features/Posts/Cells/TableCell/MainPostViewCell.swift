@@ -35,6 +35,11 @@ class MainPostViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+}
+
+// MARK: - Setup UI
+
+extension MainPostViewCell {
     
     func setupUI() {
         tableView.isScrollEnabled = false
@@ -60,6 +65,11 @@ class MainPostViewCell: UITableViewCell {
         tableView.delegate = self
         tableView.dataSource = self
     }
+}
+
+// MARK: - Cell Configuration
+
+extension MainPostViewCell {
     
     func configure(with user: UserPosts) {
         self.userPost = user

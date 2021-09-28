@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - setupUI
+
 extension ViewController {
     func setupUI() {
         tableView.separatorStyle = .none
@@ -53,7 +55,11 @@ extension ViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
-    
+}
+
+// MARK: - setupData
+
+extension ViewController {
     func setupData() {
         if dataSource.isEmpty {
             tableView.showLoading()

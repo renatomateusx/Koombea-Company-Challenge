@@ -12,10 +12,10 @@ protocol FourMoreImagesViewCellDelegate: AnyObject {
 }
 
 class FourMoreImagesViewCell: UITableViewCell {
-
+    
     // MARK: - Identifier
     static let identifier: String = "FourMoreImagesViewCell"
-
+    
     // MARK: - Outlets
     @IBOutlet weak var postDateLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
@@ -35,11 +35,13 @@ class FourMoreImagesViewCell: UITableViewCell {
         backgroundColor = .red
         setupUI()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
 }
+
+// MARK: - Setup UI
 
 extension FourMoreImagesViewCell {
     func setupUI() {
@@ -61,11 +63,11 @@ extension FourMoreImagesViewCell {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-    
-    func configure(with post: Post) {
-        self.post = post
-    }
-    
+}
+
+// MARK: - Setup Data
+
+extension FourMoreImagesViewCell {
     func setupData() {
         let date = Date()
         if let postedDate = self.post?.date {
@@ -87,13 +89,22 @@ extension FourMoreImagesViewCell {
     }
 }
 
-// MARK: - CollectionViewDelegate
+// MARK: - Cell Configuration
 
-extension FourMoreImagesViewCell: UICollectionViewDelegate {
+extension FourMoreImagesViewCell {
+    func configureImageTapped() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTappedImage(tapGesture:)))
+        self.postImageView.isUserInteractionEnabled = true
+        self.postImageView.addGestureRecognizer(tap)
+    }
     
+    func configure(with post: Post) {
+        self.post = post
+    }
 }
 
 // MARK: - CollectionViewDataSource
+
 extension FourMoreImagesViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.pics.count
@@ -110,7 +121,6 @@ extension FourMoreImagesViewCell: UICollectionViewDataSource {
         }
         return cell
     }
-    
 }
 
 // MARK: - UICollectionViewLayout
@@ -124,12 +134,6 @@ extension FourMoreImagesViewCell: UICollectionViewDelegateFlowLayout {
 // MARK: - Actions
 
 extension FourMoreImagesViewCell {
-    func configureImageTapped() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(didTappedImage(tapGesture:)))
-        self.postImageView.isUserInteractionEnabled = true
-        self.postImageView.addGestureRecognizer(tap)
-    }
-    
     @objc func didTappedImage(tapGesture: UITapGestureRecognizer) {
         let imageView = tapGesture.view as! UIImageView
         if let image = imageView.image {

@@ -66,6 +66,8 @@ class DetailPostViewController: UIViewController {
     }
 }
 
+// MARK: - Actions
+
 extension DetailPostViewController {
     @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
 
