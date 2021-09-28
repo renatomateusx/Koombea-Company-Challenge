@@ -125,6 +125,8 @@ extension MainPostViewCell: UITableViewDataSource {
             return 393
         case 2:
             return 191
+        case 3:
+            return 577
         default:
             return 595
         }

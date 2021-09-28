@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="637" id="KGk-i7-Jjw" customClass="MainPostViewCell" customModule="KoombeaChallengeTest" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MainPostViewCell" customModule="KoombeaChallengeTest" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="637"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -59,16 +59,22 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="veR-tB-MC5">
-                                <rect key="frame" x="0.0" y="55" width="320" height="582"/>
+                                <rect key="frame" x="0.0" y="60" width="320" height="577"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b4z-Nu-kEJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="582"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="577"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="577" id="u8l-FF-wuQ"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="577" id="QOb-9H-IRg"/>
                                         </constraints>
                                     </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="b4z-Nu-kEJ" firstAttribute="leading" secondItem="veR-tB-MC5" secondAttribute="leading" id="LeA-D3-gLU"/>
+                                    <constraint firstAttribute="bottom" secondItem="b4z-Nu-kEJ" secondAttribute="bottom" id="U84-7L-qP5"/>
+                                    <constraint firstItem="b4z-Nu-kEJ" firstAttribute="top" secondItem="veR-tB-MC5" secondAttribute="top" id="dXw-ym-TPr"/>
+                                    <constraint firstAttribute="trailing" secondItem="b4z-Nu-kEJ" secondAttribute="trailing" id="eZ5-NR-rj1"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <constraints>

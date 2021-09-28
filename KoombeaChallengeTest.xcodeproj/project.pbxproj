@@ -243,7 +243,6 @@
 				7C26A73126FF7731000F5984 /* AppDelegate.swift */,
 				7C26A73326FF7731000F5984 /* SceneDelegate.swift */,
 				7C26A73D26FF7733000F5984 /* Assets.xcassets */,
-				7C26A73F26FF7733000F5984 /* LaunchScreen.storyboard */,
 				7C26A76926FF7F54000F5984 /* Constants.swift */,
 			);
 			path = Resources;
@@ -313,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				7C26A73726FF7731000F5984 /* Main.storyboard */,
+				7C26A73F26FF7733000F5984 /* LaunchScreen.storyboard */,
 				7C85B57C27010D61002A0C8C /* Posts */,
 				7C85B57F27010F7E002A0C8C /* Extensions */,
 			);
