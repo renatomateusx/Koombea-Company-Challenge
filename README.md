@@ -2,10 +2,10 @@
 Project made as a challenge for Koombea Company
 
 Used:
-KingFisher\n
-Alamofire\n
-CouchbaseLite-Swift
-External Roboto Font
+KingFisher<br/>
+Alamofire<br/>
+CouchbaseLite-Swift<br/>
+External Roboto Font<br/>
 
-#Preview
+# Preview
 is comming...
