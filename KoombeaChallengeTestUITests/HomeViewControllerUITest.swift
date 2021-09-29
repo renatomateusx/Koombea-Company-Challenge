@@ -9,14 +9,20 @@ import XCTest
 
 class HomeViewControllerlUITest: XCTestCase {
     
-    func testPullDownToRefresh() {
+    func testTableResults() {
         let app = XCUIApplication()
         app.launch()
         _ = app.tables.firstMatch.waitForExistence(timeout: 5)
-        let firstCell = app.tables.staticTexts.staticTexts.count
-        app.tables.firstMatch.swipeDown()
-        let secondCell = app.tables.staticTexts.staticTexts.count
-        XCTAssertTrue(firstCell == secondCell)
+        let cellCount = app.tables.cells.count
+        XCTAssertTrue(cellCount > 0)
+    }
+    
+    func testTapTableViewCell() {
+        let app = XCUIApplication()
+        app.launch()
+        let cell = app.tables.cells.element(boundBy: 2)
+        XCTAssertTrue(cell.exists)
+        cell.tap()
     }
     
     func testLoadMore() {
