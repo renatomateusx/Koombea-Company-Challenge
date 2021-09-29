@@ -9,15 +9,21 @@ import XCTest
 import Alamofire
 @testable import KoombeaChallengeTest
 
-class KoombeaChallengeTestTests: XCTestCase {
+class HomeViewModelTest: XCTestCase {
+    
     typealias Completion<T> = ((_ value: T?) -> Void)
-    var viewModel: ViewControllerViewModel?
+    var viewModel: HomeViewModel?
     var successCompletion: Completion<Any>?
     var failureCompletion: Completion<Any>?
     lazy var serviceMock: PostServiceMock = PostServiceMock()
+    
     override func setUp() {
-        viewModel = ViewControllerViewModel(with: serviceMock)
+        viewModel = HomeViewModel(with: serviceMock)
         viewModel?.delegate = self
+    }
+    
+    override func tearDown() {
+        viewModel = nil
     }
     
     func testGetPostsIfSuccess() {
@@ -27,7 +33,7 @@ class KoombeaChallengeTestTests: XCTestCase {
             expectation.fulfill()
         }
         viewModel?.fetchPosts()
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: 20.0)
     }
     
     func testGetPostsIfFailure() {
@@ -38,11 +44,11 @@ class KoombeaChallengeTestTests: XCTestCase {
             expectation.fulfill()
         }
         viewModel?.fetchPosts()
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: 20.0)
     }
 }
 
-extension KoombeaChallengeTestTests: ViewControllerViewModelDelegate {
+extension HomeViewModelTest: HomeViewModelDelegate {
     func onSuccessFetchingPost(posts: [UserPosts], lastUpdated: Double) {
         successCompletion?(posts)
     }
@@ -50,5 +56,4 @@ extension KoombeaChallengeTestTests: ViewControllerViewModelDelegate {
     func onFailureFetchingPost(error: Error) {
         failureCompletion?(error)
     }
-
 }

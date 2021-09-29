@@ -8,13 +8,13 @@
 import UIKit
 import Kingfisher
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Private Properties
-    internal let viewModel = ViewControllerViewModel(with: PostsService())
+    internal let viewModel = HomeViewModel(with: PostsService())
     private var dataSource: [UserPosts] = []
     private var posts: [Post] = []
     private var lastUpdated: String?
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
 
 // MARK: - setupUI
 
-extension ViewController {
+extension HomeViewController {
     func setupUI() {
         tableView.separatorStyle = .none
         tableView.backgroundColor = .white
@@ -61,7 +61,7 @@ extension ViewController {
 
 // MARK: - SetupData
 
-extension ViewController {
+extension HomeViewController {
     func setupData() {
         viewModel.delegate = self
         viewModel.offLineDelegate = self
@@ -75,7 +75,7 @@ extension ViewController {
 
 // MARK: - ViewControllerViewModelDelegate
 
-extension ViewController: ViewControllerViewModelDelegate {
+extension HomeViewController: HomeViewModelDelegate {
     func onSuccessFetchingPost(posts: [UserPosts], lastUpdated: Double) {
         self.dataSource = posts
         self.lastUpdated = self.getDate(sinceTime: lastUpdated)
@@ -93,7 +93,7 @@ extension ViewController: ViewControllerViewModelDelegate {
 
 // MARK: - TableViewDataSource
 
-extension ViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -129,7 +129,7 @@ extension ViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension ViewController: UITableViewDelegate {
+extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if viewModel.isOffLine {
@@ -150,7 +150,7 @@ extension ViewController: UITableViewDelegate {
 
 // MARK: - ViewControllerViewModelOffLineDelegate
 
-extension ViewController: ViewControllerViewModelOffLineDelegate {
+extension HomeViewController: HomeViewModelOffLineDelegate {
     func runningOffLine() {
         self.showToast(message: "You're running offline",
                        font: .systemFont(ofSize: 16, weight: .bold))
@@ -159,7 +159,7 @@ extension ViewController: ViewControllerViewModelOffLineDelegate {
 
 // MARK: - Helpers
 
-private extension ViewController {
+private extension HomeViewController {
     func getEmptyView() -> UIView {
         
         let labelDescription: UILabel = UILabel()
@@ -211,7 +211,7 @@ private extension ViewController {
 
 // MARK: - Actions
 
-private extension ViewController {
+private extension HomeViewController {
     @objc func refresh(_ sender: AnyObject) {
         viewModel.fetchPosts()
     }

@@ -8,21 +8,21 @@
 import UIKit
 import Foundation
 
-protocol ViewControllerViewModelOffLineDelegate: AnyObject {
+protocol HomeViewModelOffLineDelegate: AnyObject {
     func runningOffLine()
 }
 
-protocol ViewControllerViewModelDelegate: AnyObject {
+protocol HomeViewModelDelegate: AnyObject {
     func onSuccessFetchingPost(posts: [UserPosts], lastUpdated: Double)
     func onFailureFetchingPost(error: Error)
 }
 
-class ViewControllerViewModel {
+class HomeViewModel {
     
     // MARK: - Private Properties
     let postService: PostServiceProtocol
-    var delegate: ViewControllerViewModelDelegate?
-    var offLineDelegate: ViewControllerViewModelOffLineDelegate?
+    var delegate: HomeViewModelDelegate?
+    var offLineDelegate: HomeViewModelOffLineDelegate?
     var isOffLine: Bool = false
     
     // MARK: - Public Properties
@@ -64,7 +64,7 @@ class ViewControllerViewModel {
 }
 
 // MARK: - Helpers
-extension ViewControllerViewModel {
+extension HomeViewModel {
     func calculateCell(userPost: UserPosts) -> CGFloat {
         var height: CGFloat = 0
         let posts = userPost.posts
