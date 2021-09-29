@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,6 +32,7 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstAttribute="height" constant="65" id="KlB-rE-qBd"/>
                         <constraint firstAttribute="trailing" secondItem="Ji8-LB-FWA" secondAttribute="trailing" constant="20" id="KsM-0p-sSJ"/>
                         <constraint firstItem="Ji8-LB-FWA" firstAttribute="leading" secondItem="nRy-8I-USu" secondAttribute="leading" constant="20" id="LP3-Z0-Qdd"/>
                         <constraint firstItem="Ji8-LB-FWA" firstAttribute="top" secondItem="nRy-8I-USu" secondAttribute="top" constant="5" id="OnN-wk-eVy"/>

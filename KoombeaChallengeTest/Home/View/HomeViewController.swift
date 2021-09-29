@@ -38,6 +38,12 @@ extension HomeViewController {
         
         tableView.estimatedRowHeight = 600
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedSectionHeaderHeight = 80
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
+        tableView.contentInset = UIEdgeInsets(top: 0,
+                                              left: 0,
+                                              bottom: 0,
+                                              right: 0)
         
         tableView.register(UINib(nibName: MainPostViewCell.identifier,
                                  bundle: nil),
@@ -235,9 +241,6 @@ private extension HomeViewController {
     }
     
     func calculateHeaderHeight() -> CGFloat {
-        if viewModel.isOffLine {
-            return 65
-        }
-        return 0
+        return viewModel.isOffLine ? UITableView.automaticDimension : 0
     }
 }
