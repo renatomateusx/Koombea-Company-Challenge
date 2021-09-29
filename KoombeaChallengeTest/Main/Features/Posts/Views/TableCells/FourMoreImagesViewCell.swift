@@ -69,6 +69,7 @@ extension FourMoreImagesViewCell {
 
 extension FourMoreImagesViewCell {
     func setupData() {
+        self.pics = []
         let date = Date()
         if let postedDate = self.post?.date {
             self.postDateLabel.text = date.getDate(dateString: postedDate)

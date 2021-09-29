@@ -20,7 +20,6 @@ class MainPostViewCell: UITableViewCell {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Private Properties
-    private let viewModel = ViewControllerViewModel()
     private var userPost: UserPosts?
     private var posts: [Post] = []
     
@@ -64,10 +63,6 @@ extension MainPostViewCell {
         tableView.register(UINib(nibName: FourMoreImagesViewCell.identifier,
                                  bundle: nil),
                            forCellReuseIdentifier: FourMoreImagesViewCell.identifier)
-        tableView.register(UINib(nibName: CelulaAmaralRenatinhoCell.identifier,
-                                 bundle: nil),
-                           forCellReuseIdentifier: CelulaAmaralRenatinhoCell.identifier)
-        
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -108,53 +103,36 @@ extension MainPostViewCell: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CelulaAmaralRenatinhoCell.identifier,
-                                                       for: indexPath) as? CelulaAmaralRenatinhoCell else { return UITableViewCell() }
-        cell.fill(with: self.posts[indexPath.row])
-//        cell.delegate = self
-        return cell
-        
-        //        let picsCount = self.posts[indexPath.row].pics.count
-        //        switch picsCount {
-        //        case 1:
-        //            guard let cell = tableView.dequeueReusableCell(withIdentifier: OneBigImageCell.identifier,
-        //                                                           for: indexPath) as? OneBigImageCell else { return UITableViewCell() }
-        //            cell.configure(with: self.posts[indexPath.row])
-        //            cell.delegate = self
-        //            return cell
-        //        case 2:
-        //            guard let cell = tableView.dequeueReusableCell(withIdentifier: TwoSmallImagesViewCell.identifier,
-        //                                                           for: indexPath) as? TwoSmallImagesViewCell else { return UITableViewCell() }
-        //            cell.configure(with: self.posts[indexPath.row])
-        //            cell.delegate = self
-        //            return cell
-        //        case 3:
-        //            guard let cell = tableView.dequeueReusableCell(withIdentifier: ThreeImagesViewCell.identifier,
-        //                                                           for: indexPath) as? ThreeImagesViewCell else { return UITableViewCell() }
-        //            cell.configure(with: self.posts[indexPath.row])
-        //            cell.delegate = self
-        //            return cell
-        //        default:
-        //            guard let cell = tableView.dequeueReusableCell(withIdentifier: FourMoreImagesViewCell.identifier,
-        //                                                           for: indexPath) as? FourMoreImagesViewCell else { return UITableViewCell() }
-        //            cell.configure(with: self.posts[indexPath.row])
-        //            cell.delegate = self
-        //            return cell
-        //        }
+        let picsCount = self.posts[indexPath.row].pics.count
+        switch picsCount {
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: OneBigImageCell.identifier,
+                                                           for: indexPath) as? OneBigImageCell else { return UITableViewCell() }
+            cell.configure(with: self.posts[indexPath.row])
+            cell.delegate = self
+            return cell
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TwoSmallImagesViewCell.identifier,
+                                                           for: indexPath) as? TwoSmallImagesViewCell else { return UITableViewCell() }
+            cell.configure(with: self.posts[indexPath.row])
+            cell.delegate = self
+            return cell
+        case 3:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ThreeImagesViewCell.identifier,
+                                                           for: indexPath) as? ThreeImagesViewCell else { return UITableViewCell() }
+            cell.configure(with: self.posts[indexPath.row])
+            cell.delegate = self
+            return cell
+        default:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FourMoreImagesViewCell.identifier,
+                                                           for: indexPath) as? FourMoreImagesViewCell else { return UITableViewCell() }
+            cell.configure(with: self.posts[indexPath.row])
+            cell.delegate = self
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //        let picsCount = self.posts[indexPath.row].pics.count
-        //        switch picsCount {
-        //        case 1:
-        //            return viewModel.oneBigImageHeight
-        //        case 2:
-        //            return viewModel.twoSmallImagesHeight
-        //        case 3:
-        //            return viewModel.threeImagesHeight
-        //        default:
-        //            return viewModel.fourMoreImagesHeight
-        //        }
         return UITableView.automaticDimension
     }
 }

@@ -8,8 +8,11 @@
 import Foundation
 import Alamofire
 
-class PostsService {
-    static let shared = PostsService()
+protocol PostServiceProtocol: AnyObject {
+    func fetchPosts(completion: @escaping(Result<DataPosts, Error>) -> Void)
+}
+
+class PostsService: PostServiceProtocol {
     
     func fetchPosts(completion: @escaping(Result<DataPosts, Error>) -> Void) {
         let request = AF.request(Constants.postsURL)
