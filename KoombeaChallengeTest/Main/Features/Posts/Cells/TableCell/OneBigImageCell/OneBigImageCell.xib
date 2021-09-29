@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -21,6 +22,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="392" height="406"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdZ-hK-7ax">
+                        <rect key="frame" x="0.0" y="0.0" width="392" height="406"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="406" id="GKp-R4-7pI"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 21st" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5e-ug-gel">
                         <rect key="frame" x="11" y="5" width="370" height="20"/>
                         <constraints>
@@ -38,8 +46,12 @@
                     </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="LdZ-hK-7ax" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="128-SS-Auv"/>
                     <constraint firstAttribute="trailing" secondItem="sgR-oy-30t" secondAttribute="trailing" constant="11" id="D2u-ei-85z"/>
+                    <constraint firstItem="LdZ-hK-7ax" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="FhW-IW-Xnq"/>
                     <constraint firstItem="t5e-ug-gel" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="UXa-vH-neh"/>
+                    <constraint firstAttribute="bottom" secondItem="LdZ-hK-7ax" secondAttribute="bottom" id="UtC-qh-wCo"/>
+                    <constraint firstAttribute="trailing" secondItem="LdZ-hK-7ax" secondAttribute="trailing" id="b2E-CC-UZ0"/>
                     <constraint firstItem="sgR-oy-30t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="kMJ-cP-GuA"/>
                     <constraint firstItem="t5e-ug-gel" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="kSt-gI-MWg"/>
                     <constraint firstAttribute="trailing" secondItem="t5e-ug-gel" secondAttribute="trailing" constant="11" id="m4w-vA-ZHr"/>
@@ -56,5 +68,8 @@
     </objects>
     <resources>
         <image name="bigPic" width="353" height="353"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

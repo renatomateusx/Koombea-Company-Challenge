@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -21,6 +22,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="380" height="582"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfb-rn-mZl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="582"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="582" id="WG9-rj-haF"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 21st" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqG-aF-y4N">
                         <rect key="frame" x="11" y="5" width="353" height="20"/>
                         <constraints>
@@ -59,13 +67,17 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="gqG-aF-y4N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="3l1-gJ-Nvw"/>
+                    <constraint firstItem="wfb-rn-mZl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5mn-WS-lcM"/>
                     <constraint firstAttribute="trailing" secondItem="rmL-lZ-Ck0" secondAttribute="trailing" constant="11" id="Dt5-i6-J5r"/>
                     <constraint firstItem="alb-l6-s5H" firstAttribute="top" secondItem="rmL-lZ-Ck0" secondAttribute="bottom" constant="11" id="Hbv-N1-Wlu"/>
                     <constraint firstAttribute="trailing" secondItem="gqG-aF-y4N" secondAttribute="trailing" constant="11" id="IeJ-69-X0J"/>
                     <constraint firstItem="rmL-lZ-Ck0" firstAttribute="top" secondItem="gqG-aF-y4N" secondAttribute="bottom" constant="11" id="LkB-So-qcW"/>
                     <constraint firstItem="alb-l6-s5H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="LnY-QP-nPm"/>
                     <constraint firstAttribute="trailing" secondItem="alb-l6-s5H" secondAttribute="trailing" constant="11" id="P7b-XG-Nqe"/>
+                    <constraint firstItem="wfb-rn-mZl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="S68-BA-UVh"/>
                     <constraint firstItem="gqG-aF-y4N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="byx-Tz-c3c"/>
+                    <constraint firstAttribute="trailing" secondItem="wfb-rn-mZl" secondAttribute="trailing" id="ePc-b8-M7a"/>
+                    <constraint firstAttribute="bottom" secondItem="wfb-rn-mZl" secondAttribute="bottom" id="opW-mC-2GR"/>
                     <constraint firstItem="rmL-lZ-Ck0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="sJN-62-qk2"/>
                 </constraints>
             </tableViewCellContentView>
@@ -81,5 +93,8 @@
     </objects>
     <resources>
         <image name="bigPic" width="353" height="353"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

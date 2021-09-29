@@ -22,6 +22,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="408" height="540"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2T-nu-IsV">
+                        <rect key="frame" x="0.0" y="0.0" width="408" height="540"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="540" id="0dz-LC-J2s"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 21st" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zf7-49-HiA">
                         <rect key="frame" x="11" y="5" width="386" height="20"/>
                         <constraints>
@@ -49,12 +56,16 @@
                     </collectionView>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="S2T-nu-IsV" secondAttribute="trailing" id="1xW-M4-bYK"/>
+                    <constraint firstItem="S2T-nu-IsV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="534-NN-XvS"/>
                     <constraint firstItem="BDX-eQ-d1U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="ENr-RJ-mp5"/>
                     <constraint firstAttribute="trailing" secondItem="BDX-eQ-d1U" secondAttribute="trailing" constant="11" id="FgF-p4-o9S"/>
                     <constraint firstAttribute="trailing" secondItem="Zf7-49-HiA" secondAttribute="trailing" constant="11" id="Jrl-4y-4aW"/>
+                    <constraint firstAttribute="bottom" secondItem="S2T-nu-IsV" secondAttribute="bottom" id="KaZ-t7-GYv"/>
                     <constraint firstAttribute="bottom" secondItem="kVX-VB-HdE" secondAttribute="bottom" constant="5" id="MdU-ET-sNO"/>
                     <constraint firstItem="kVX-VB-HdE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="Nyl-BJ-nR5"/>
                     <constraint firstItem="Zf7-49-HiA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Qbd-6a-31x"/>
+                    <constraint firstItem="S2T-nu-IsV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bns-p5-z6Z"/>
                     <constraint firstItem="kVX-VB-HdE" firstAttribute="top" secondItem="BDX-eQ-d1U" secondAttribute="bottom" constant="11" id="c0h-Ft-CoF"/>
                     <constraint firstAttribute="trailing" secondItem="kVX-VB-HdE" secondAttribute="trailing" constant="11" id="jsU-1j-gnk"/>
                     <constraint firstItem="Zf7-49-HiA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="kcy-bx-HLj"/>

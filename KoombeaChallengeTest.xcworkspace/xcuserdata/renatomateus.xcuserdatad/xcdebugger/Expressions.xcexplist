@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "CelulaAmaralRenatinhoCell.fill(with:):CelulaAmaralRenatinhoCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "post.pics.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainPostViewCell.tableView(_:numberOfRowsInSection:):MainPostViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.posts.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CelulaAmaralRenatinhoCell.collectionView(_:numberOfItemsInSection:):CelulaAmaralRenatinhoCell.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

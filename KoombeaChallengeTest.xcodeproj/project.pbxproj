@@ -62,6 +62,8 @@
 		41A41B6F270342DA0099D809 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41A41B3A270342DA0099D809 /* RobotoCondensed-Light.ttf */; };
 		41A41B70270342DA0099D809 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41A41B3A270342DA0099D809 /* RobotoCondensed-Light.ttf */; };
 		41A41B74270385510099D809 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A41B73270385510099D809 /* SceneDelegate.swift */; };
+		41A41B772703D91C0099D809 /* CelulaAmaralRenatinhoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A41B752703D91C0099D809 /* CelulaAmaralRenatinhoCell.swift */; };
+		41A41B782703D91C0099D809 /* CelulaAmaralRenatinhoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A41B762703D91C0099D809 /* CelulaAmaralRenatinhoCell.xib */; };
 		41B960D3270211690028B439 /* OneBigImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B960D1270211690028B439 /* OneBigImageCell.swift */; };
 		41B960D4270211690028B439 /* OneBigImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B960D2270211690028B439 /* OneBigImageCell.xib */; };
 		41B960D727023AE10028B439 /* TwoSmallImagesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B960D527023AE10028B439 /* TwoSmallImagesViewCell.swift */; };
@@ -137,6 +139,8 @@
 		41A41B39270342DA0099D809 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		41A41B3A270342DA0099D809 /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
 		41A41B73270385510099D809 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		41A41B752703D91C0099D809 /* CelulaAmaralRenatinhoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelulaAmaralRenatinhoCell.swift; sourceTree = "<group>"; };
+		41A41B762703D91C0099D809 /* CelulaAmaralRenatinhoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CelulaAmaralRenatinhoCell.xib; sourceTree = "<group>"; };
 		41B960D1270211690028B439 /* OneBigImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBigImageCell.swift; sourceTree = "<group>"; };
 		41B960D2270211690028B439 /* OneBigImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneBigImageCell.xib; sourceTree = "<group>"; };
 		41B960D527023AE10028B439 /* TwoSmallImagesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSmallImagesViewCell.swift; sourceTree = "<group>"; };
@@ -255,6 +259,8 @@
 				41B960D027020F0B0028B439 /* OneBigImageCell */,
 				7C26A77926FFD46D000F5984 /* MainPostViewCell.swift */,
 				7C26A77A26FFD46D000F5984 /* MainPostViewCell.xib */,
+				41A41B752703D91C0099D809 /* CelulaAmaralRenatinhoCell.swift */,
+				41A41B762703D91C0099D809 /* CelulaAmaralRenatinhoCell.xib */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -564,6 +570,7 @@
 				7C26A74126FF7733000F5984 /* LaunchScreen.storyboard in Resources */,
 				41B960E027024B890028B439 /* FourMoreImagesViewCell.xib in Resources */,
 				7C26A73E26FF7733000F5984 /* Assets.xcassets in Resources */,
+				41A41B782703D91C0099D809 /* CelulaAmaralRenatinhoCell.xib in Resources */,
 				41A41B5C270342DA0099D809 /* RobotoCondensed-Italic.ttf in Resources */,
 				41B960DC270243DF0028B439 /* ThreeImagesViewCell.xib in Resources */,
 				41A41B4A270342DA0099D809 /* Roboto-Bold.ttf in Resources */,
@@ -752,6 +759,7 @@
 			files = (
 				7C85B57E27010F18002A0C8C /* UITableView+Extensions.swift in Sources */,
 				7C26A76C26FF8229000F5984 /* ViewControllerViewModel.swift in Sources */,
+				41A41B772703D91C0099D809 /* CelulaAmaralRenatinhoCell.swift in Sources */,
 				7C26A77F26FFF2A4000F5984 /* PictureViewCell.swift in Sources */,
 				41B960D3270211690028B439 /* OneBigImageCell.swift in Sources */,
 				7C26A73626FF7731000F5984 /* ViewController.swift in Sources */,

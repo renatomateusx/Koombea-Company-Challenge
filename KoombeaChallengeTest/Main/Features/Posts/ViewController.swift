@@ -36,6 +36,9 @@ extension ViewController {
     func setupUI() {
         tableView.separatorStyle = .none
         tableView.backgroundColor = .white
+        
+        tableView.estimatedRowHeight = 600
+        tableView.rowHeight = UITableView.automaticDimension
        
         tableView.register(UINib(nibName: MainPostViewCell.identifier,
                                  bundle: nil),
@@ -99,7 +102,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.dataSource.count
+        return self.dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -120,10 +123,14 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let userPost = self.dataSource[indexPath.row]
-        let height = viewModel.calculateCell(userPost: userPost)
-        return height
+            return 600
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let userPost = self.dataSource[indexPath.row]
+//        let height = viewModel.calculateCell(userPost: userPost)
+//        return height
+//    }
 }
 
 // MARK: - UITableViewDelegate

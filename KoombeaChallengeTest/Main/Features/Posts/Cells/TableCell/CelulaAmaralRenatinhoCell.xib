@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="475" id="KGk-i7-Jjw" customClass="CelulaAmaralRenatinhoCell" customModule="KoombeaChallengeTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="t2L-0d-Wfx">
+                        <rect key="frame" x="11" y="0.0" width="298" height="206"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jun 21th" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Riz-eR-fVN">
+                                <rect key="frame" x="0.0" y="0.0" width="298" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="kSY-9V-Rfe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="jGf-Jc-rxF">
+                                <rect key="frame" x="0.0" y="31" width="298" height="0.0"/>
+                                <subviews>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PYe-sJ-IRR">
+                                        <rect key="frame" x="298" y="0.0" width="0.0" height="353"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="353" id="L3E-d9-2fD"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cb5-JS-T2E">
+                                        <rect key="frame" x="298" y="0.0" width="0.0" height="353"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="353" id="GAO-uJ-udg"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tli-cN-gAw">
+                                <rect key="frame" x="0.0" y="31" width="298" height="175"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="idi-yS-1cd"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AG9-7M-hvU">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Riz-eR-fVN" firstAttribute="top" secondItem="t2L-0d-Wfx" secondAttribute="top" id="7YV-Xb-HaP"/>
+                            <constraint firstAttribute="trailing" secondItem="Riz-eR-fVN" secondAttribute="trailing" id="Gls-tm-Taf"/>
+                            <constraint firstAttribute="trailing" secondItem="jGf-Jc-rxF" secondAttribute="trailing" id="PH6-tg-ZMW"/>
+                            <constraint firstItem="jGf-Jc-rxF" firstAttribute="leading" secondItem="t2L-0d-Wfx" secondAttribute="leading" id="hu5-yi-fzV"/>
+                            <constraint firstItem="tli-cN-gAw" firstAttribute="top" secondItem="Riz-eR-fVN" secondAttribute="bottom" constant="11" id="sZH-t8-68h"/>
+                            <constraint firstItem="Riz-eR-fVN" firstAttribute="leading" secondItem="t2L-0d-Wfx" secondAttribute="leading" id="z1U-xu-sKj"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="t2L-0d-Wfx" secondAttribute="trailing" constant="11" id="87q-HQ-dQh"/>
+                    <constraint firstAttribute="bottom" secondItem="t2L-0d-Wfx" secondAttribute="bottom" constant="11" id="at2-Fh-bt5"/>
+                    <constraint firstItem="t2L-0d-Wfx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="iev-Eb-3HW"/>
+                    <constraint firstItem="t2L-0d-Wfx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wMx-o8-kTd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="tli-cN-gAw" id="JhM-fv-dw2"/>
+                <outlet property="firstImageHeightConstraint" destination="L3E-d9-2fD" id="1cQ-LE-691"/>
+                <outlet property="firstImageView" destination="PYe-sJ-IRR" id="Scf-uJ-uQq"/>
+                <outlet property="secondImageView" destination="cb5-JS-T2E" id="lhY-FX-U0F"/>
+            </connections>
+            <point key="canvasLocation" x="57.971014492753625" y="217.29910714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

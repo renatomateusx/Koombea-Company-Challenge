@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -21,6 +22,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="378" height="212"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s88-aB-PTD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="212" id="IMv-pt-Y9q"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 21st" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khj-Em-OGK">
                         <rect key="frame" x="11" y="5" width="353" height="20"/>
                         <constraints>
@@ -31,7 +39,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="heR-Fw-rwX">
-                        <rect key="frame" x="11" y="36" width="353" height="171"/>
+                        <rect key="frame" x="11" y="36" width="353" height="165"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PWy-te-mds">
                                 <rect key="frame" x="0.0" y="0.0" width="171" height="171"/>
@@ -52,13 +60,17 @@
                 </subviews>
                 <viewLayoutGuide key="safeArea" id="9OY-S6-XWg"/>
                 <constraints>
+                    <constraint firstItem="s88-aB-PTD" firstAttribute="top" secondItem="9OY-S6-XWg" secondAttribute="top" id="5YN-AE-h3b"/>
                     <constraint firstAttribute="trailing" secondItem="heR-Fw-rwX" secondAttribute="trailing" constant="11" id="6HU-3g-vG4"/>
                     <constraint firstItem="9OY-S6-XWg" firstAttribute="trailing" secondItem="khj-Em-OGK" secondAttribute="trailing" constant="11" id="8Vh-e9-8X6"/>
                     <constraint firstItem="heR-Fw-rwX" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="AlQ-YO-bEc"/>
+                    <constraint firstItem="9OY-S6-XWg" firstAttribute="bottom" secondItem="s88-aB-PTD" secondAttribute="bottom" id="NKG-Z7-aTS"/>
                     <constraint firstItem="khj-Em-OGK" firstAttribute="top" secondItem="9OY-S6-XWg" secondAttribute="top" constant="5" id="OJM-Gk-keI"/>
+                    <constraint firstItem="s88-aB-PTD" firstAttribute="leading" secondItem="9OY-S6-XWg" secondAttribute="leading" id="Qrp-yn-eUy"/>
                     <constraint firstItem="heR-Fw-rwX" firstAttribute="leading" secondItem="9OY-S6-XWg" secondAttribute="leading" constant="11" id="gcS-5D-TgC"/>
                     <constraint firstItem="heR-Fw-rwX" firstAttribute="top" secondItem="khj-Em-OGK" secondAttribute="bottom" constant="11" id="q8K-xw-hDj"/>
                     <constraint firstItem="khj-Em-OGK" firstAttribute="leading" secondItem="9OY-S6-XWg" secondAttribute="leading" constant="11" id="uZS-rW-WNU"/>
+                    <constraint firstAttribute="trailing" secondItem="s88-aB-PTD" secondAttribute="trailing" id="vbk-OD-z2P"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -66,7 +78,12 @@
                 <outlet property="postDateLabel" destination="khj-Em-OGK" id="nvl-Dl-LJU"/>
                 <outlet property="secondImageView" destination="aTn-Ea-JN3" id="GRR-4z-55r"/>
             </connections>
-            <point key="canvasLocation" x="60.869565217391312" y="70.982142857142847"/>
+            <point key="canvasLocation" x="60.869565217391312" y="70.3125"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
