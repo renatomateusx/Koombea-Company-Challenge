@@ -24,6 +24,8 @@ class HomeViewModelTest: XCTestCase {
     
     override func tearDown() {
         viewModel = nil
+        
+        super.tearDown()
     }
     
     func testGetPostsIfSuccess() {
