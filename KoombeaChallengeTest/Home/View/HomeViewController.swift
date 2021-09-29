@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-// MARK: - setupUI
+// MARK: - SetupUI
 
 extension HomeViewController {
     func setupUI() {
@@ -122,7 +122,7 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let userPost = self.dataSource[indexPath.row]
-        let height = viewModel.calculateCell(userPost: userPost)
+        let height = self.calculateCellHeight(userPost: userPost)
         return height
     }
 }
@@ -141,10 +141,7 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if viewModel.isOffLine {
-            return 65
-        }
-        return 0
+        return self.calculateHeaderHeight()
     }
 }
 
@@ -154,6 +151,14 @@ extension HomeViewController: HomeViewModelOffLineDelegate {
     func runningOffLine() {
         self.showToast(message: "You're running offline",
                        font: .systemFont(ofSize: 16, weight: .bold))
+    }
+}
+
+// MARK: - Actions
+
+private extension HomeViewController {
+    @objc func refresh(_ sender: AnyObject) {
+        viewModel.fetchPosts()
     }
 }
 
@@ -207,12 +212,29 @@ private extension HomeViewController {
         let dateString = dateFormater.string(from: date)
         return dateString
     }
-}
-
-// MARK: - Actions
-
-private extension HomeViewController {
-    @objc func refresh(_ sender: AnyObject) {
-        viewModel.fetchPosts()
+    
+    func calculateCellHeight(userPost: UserPosts) -> CGFloat {
+        var height: CGFloat = 0
+        let posts = userPost.posts
+        for post in posts {
+            switch post.pics.count {
+            case 1:
+                height += viewModel.oneBigImageHeight
+            case 2:
+                height += viewModel.twoSmallImagesHeight
+            case 3:
+                height += viewModel.threeImagesHeight
+            default:
+                height += viewModel.fourMoreImagesHeight
+            }
+        }
+        return height
+    }
+    
+    func calculateHeaderHeight() -> CGFloat {
+        if viewModel.isOffLine {
+            return 65
+        }
+        return 0
     }
 }

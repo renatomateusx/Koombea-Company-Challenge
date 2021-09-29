@@ -292,6 +292,7 @@
 		41A41B7E2704049D0099D809 /* Utilis */ = {
 			isa = PBXGroup;
 			children = (
+				7C26A7862700AB0A000F5984 /* DB */,
 				7C85B57F27010F7E002A0C8C /* Extensions */,
 				7C26A76926FF7F54000F5984 /* Constants.swift */,
 			);
@@ -350,11 +351,10 @@
 			isa = PBXGroup;
 			children = (
 				41984C39270461AE009F8DB4 /* Base.lproj */,
-				41A41B7E2704049D0099D809 /* Utilis */,
 				7C26A76D26FF837D000F5984 /* Model */,
-				7C26A7862700AB0A000F5984 /* DB */,
 				7C26A76526FF7E51000F5984 /* Home */,
 				41984C3A27046215009F8DB4 /* Detail */,
+				41A41B7E2704049D0099D809 /* Utilis */,
 				7C26A73A26FF7731000F5984 /* KoombeaChallengeTest.xcdatamodeld */,
 				7C26A74226FF7733000F5984 /* Info.plist */,
 			);

@@ -62,24 +62,3 @@ class HomeViewModel {
         }
     }
 }
-
-// MARK: - Helpers
-extension HomeViewModel {
-    func calculateCell(userPost: UserPosts) -> CGFloat {
-        var height: CGFloat = 0
-        let posts = userPost.posts
-        for post in posts {
-            switch post.pics.count {
-            case 1:
-                height += oneBigImageHeight
-            case 2:
-                height += twoSmallImagesHeight
-            case 3:
-                height += threeImagesHeight
-            default:
-                height += fourMoreImagesHeight
-            }
-        }
-        return height
-    }
-}
