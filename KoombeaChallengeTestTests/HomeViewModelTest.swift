@@ -11,10 +11,10 @@ import Alamofire
 
 class HomeViewModelTest: XCTestCase {
     
-    typealias Completion<T> = ((_ value: T?) -> Void)
-    var viewModel: HomeViewModel?
-    var successCompletion: Completion<Any>?
-    var failureCompletion: Completion<Any>?
+    typealias Completion<T> = ((_ value: T) -> Void)
+    var viewModel: HomeViewModel!
+    var successCompletion: Completion<Any>!
+    var failureCompletion: Completion<Any>!
     lazy var serviceMock: PostServiceMock = PostServiceMock()
     
     override func setUp() {
@@ -32,7 +32,7 @@ class HomeViewModelTest: XCTestCase {
             XCTAssertNotNil(posts, "No data was downloaded.")
             expectation.fulfill()
         }
-        viewModel?.fetchPosts()
+        viewModel.fetchPosts()
         wait(for: [expectation], timeout: 20.0)
     }
     
@@ -43,17 +43,17 @@ class HomeViewModelTest: XCTestCase {
             XCTAssertNotNil(error, "No data was downloaded.")
             expectation.fulfill()
         }
-        viewModel?.fetchPosts()
+        viewModel.fetchPosts()
         wait(for: [expectation], timeout: 60.0)
     }
 }
 
 extension HomeViewModelTest: HomeViewModelDelegate {
     func onSuccessFetchingPost(posts: [UserPosts], lastUpdated: Double) {
-        successCompletion?(posts)
+        successCompletion(posts)
     }
     
     func onFailureFetchingPost(error: Error) {
-        failureCompletion?(error)
+        failureCompletion(error)
     }
 }
