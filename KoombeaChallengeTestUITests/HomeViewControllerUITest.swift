@@ -25,6 +25,15 @@ class HomeViewControllerlUITest: XCTestCase {
         cell.tap()
     }
     
+    func testSwipeDownNavigation() {
+        let app = XCUIApplication()
+        app.launch()
+        let cell = app.tables.cells.element(boundBy: 2)
+        XCTAssertTrue(cell.exists)
+        cell.tap()
+        app.swipeDown()
+    }
+    
     func testLoadMore() {
         let app = XCUIApplication()
         app.launch()
