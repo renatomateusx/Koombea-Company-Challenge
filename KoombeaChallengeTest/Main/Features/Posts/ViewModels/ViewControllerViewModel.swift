@@ -21,11 +21,10 @@ class ViewControllerViewModel {
     var isOffLine: Bool = false
     
     // MARK: - Public Properties
-    let oneBigImageHeight: CGFloat = 390
-    let twoSmallImagesHeight: CGFloat = 191
-    let threeImagesHeight: CGFloat = 577
-    let fourMoreImagesHeight: CGFloat = 540
-    let viewUserDataHeight: CGFloat = 55
+    let oneBigImageHeight: CGFloat = 406
+    let twoSmallImagesHeight: CGFloat = 222
+    let threeImagesHeight: CGFloat = 582
+    let fourMoreImagesHeight: CGFloat = 550
     
     // MARK: - Inits
     
@@ -75,6 +74,6 @@ extension ViewControllerViewModel {
                 height += fourMoreImagesHeight
             }
         }
-        return height + viewUserDataHeight
+        return height
     }
 }

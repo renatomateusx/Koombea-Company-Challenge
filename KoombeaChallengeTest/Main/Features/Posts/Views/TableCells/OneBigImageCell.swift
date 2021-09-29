@@ -30,7 +30,6 @@ class OneBigImageCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .red
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

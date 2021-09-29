@@ -32,7 +32,6 @@ class FourMoreImagesViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .red
         setupUI()
     }
     
@@ -45,7 +44,6 @@ class FourMoreImagesViewCell: UITableViewCell {
 
 extension FourMoreImagesViewCell {
     func setupUI() {
-        collectionView.backgroundColor = .purple
         collectionView.isScrollEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false

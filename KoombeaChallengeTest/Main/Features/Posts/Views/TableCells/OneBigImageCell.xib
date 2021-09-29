@@ -2,9 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -15,20 +15,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="406" id="KGk-i7-Jjw" customClass="OneBigImageCell" customModule="KoombeaChallengeTest" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="OneBigImageCell" customModule="KoombeaChallengeTest" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="392" height="406"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="392" height="406"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdZ-hK-7ax">
-                        <rect key="frame" x="0.0" y="0.0" width="392" height="406"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="406" id="GKp-R4-7pI"/>
-                        </constraints>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 21st" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5e-ug-gel">
                         <rect key="frame" x="11" y="5" width="370" height="20"/>
                         <constraints>
@@ -46,16 +39,13 @@
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="LdZ-hK-7ax" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="128-SS-Auv"/>
                     <constraint firstAttribute="trailing" secondItem="sgR-oy-30t" secondAttribute="trailing" constant="11" id="D2u-ei-85z"/>
-                    <constraint firstItem="LdZ-hK-7ax" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="FhW-IW-Xnq"/>
                     <constraint firstItem="t5e-ug-gel" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="UXa-vH-neh"/>
-                    <constraint firstAttribute="bottom" secondItem="LdZ-hK-7ax" secondAttribute="bottom" id="UtC-qh-wCo"/>
-                    <constraint firstAttribute="trailing" secondItem="LdZ-hK-7ax" secondAttribute="trailing" id="b2E-CC-UZ0"/>
                     <constraint firstItem="sgR-oy-30t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="kMJ-cP-GuA"/>
                     <constraint firstItem="t5e-ug-gel" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="kSt-gI-MWg"/>
                     <constraint firstAttribute="trailing" secondItem="t5e-ug-gel" secondAttribute="trailing" constant="11" id="m4w-vA-ZHr"/>
                     <constraint firstItem="sgR-oy-30t" firstAttribute="top" secondItem="t5e-ug-gel" secondAttribute="bottom" constant="11" id="mL9-En-3XD"/>
+                    <constraint firstAttribute="bottom" secondItem="sgR-oy-30t" secondAttribute="bottom" constant="17" id="nUn-wU-7nx"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -68,8 +58,5 @@
     </objects>
     <resources>
         <image name="bigPic" width="353" height="353"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

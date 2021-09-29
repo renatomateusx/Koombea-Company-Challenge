@@ -22,7 +22,6 @@ class PictureViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .systemPink
     }
 }
 

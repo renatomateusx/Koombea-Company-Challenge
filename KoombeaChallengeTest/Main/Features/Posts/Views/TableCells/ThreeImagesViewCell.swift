@@ -32,7 +32,6 @@ class ThreeImagesViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .orange
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

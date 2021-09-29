@@ -31,7 +31,6 @@ class TwoSmallImagesViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .green
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

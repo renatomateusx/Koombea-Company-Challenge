@@ -2,9 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -15,25 +15,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="582" id="KGk-i7-Jjw" customClass="ThreeImagesViewCell" customModule="KoombeaChallengeTest" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ThreeImagesViewCell" customModule="KoombeaChallengeTest" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="380" height="582"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="380" height="582"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfb-rn-mZl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="582"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="582" id="WG9-rj-haF"/>
-                        </constraints>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May 21st" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqG-aF-y4N">
                         <rect key="frame" x="11" y="5" width="353" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="czl-5i-deh"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="wZk-mR-uGy"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="11"/>
                         <nil key="textColor"/>
@@ -48,14 +40,14 @@
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="alb-l6-s5H">
                         <rect key="frame" x="11" y="400" width="353" height="171"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F0i-hd-zbP" userLabel="First Image Viw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F0i-hd-zbP" userLabel="First Image Viw">
                                 <rect key="frame" x="0.0" y="0.0" width="171" height="171"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="171" id="eFd-ao-mOj"/>
                                     <constraint firstAttribute="height" constant="171" id="so3-sG-kIh"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZP6-Ij-jtg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZP6-Ij-jtg">
                                 <rect key="frame" x="182" y="0.0" width="171" height="171"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="171" id="4OL-Jc-RXj"/>
@@ -63,21 +55,22 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZP6-Ij-jtg" secondAttribute="bottom" id="QGg-o4-enk"/>
+                            <constraint firstAttribute="bottom" secondItem="F0i-hd-zbP" secondAttribute="bottom" id="nUH-CK-7Us"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="gqG-aF-y4N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="3l1-gJ-Nvw"/>
-                    <constraint firstItem="wfb-rn-mZl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5mn-WS-lcM"/>
                     <constraint firstAttribute="trailing" secondItem="rmL-lZ-Ck0" secondAttribute="trailing" constant="11" id="Dt5-i6-J5r"/>
                     <constraint firstItem="alb-l6-s5H" firstAttribute="top" secondItem="rmL-lZ-Ck0" secondAttribute="bottom" constant="11" id="Hbv-N1-Wlu"/>
                     <constraint firstAttribute="trailing" secondItem="gqG-aF-y4N" secondAttribute="trailing" constant="11" id="IeJ-69-X0J"/>
                     <constraint firstItem="rmL-lZ-Ck0" firstAttribute="top" secondItem="gqG-aF-y4N" secondAttribute="bottom" constant="11" id="LkB-So-qcW"/>
                     <constraint firstItem="alb-l6-s5H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="LnY-QP-nPm"/>
                     <constraint firstAttribute="trailing" secondItem="alb-l6-s5H" secondAttribute="trailing" constant="11" id="P7b-XG-Nqe"/>
-                    <constraint firstItem="wfb-rn-mZl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="S68-BA-UVh"/>
                     <constraint firstItem="gqG-aF-y4N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="byx-Tz-c3c"/>
-                    <constraint firstAttribute="trailing" secondItem="wfb-rn-mZl" secondAttribute="trailing" id="ePc-b8-M7a"/>
-                    <constraint firstAttribute="bottom" secondItem="wfb-rn-mZl" secondAttribute="bottom" id="opW-mC-2GR"/>
+                    <constraint firstAttribute="bottom" secondItem="alb-l6-s5H" secondAttribute="bottom" constant="11" id="kCQ-HD-RX7"/>
                     <constraint firstItem="rmL-lZ-Ck0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="sJN-62-qk2"/>
                 </constraints>
             </tableViewCellContentView>
@@ -93,8 +86,5 @@
     </objects>
     <resources>
         <image name="bigPic" width="353" height="353"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
