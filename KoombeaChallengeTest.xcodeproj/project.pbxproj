@@ -394,9 +394,9 @@
 		7C26A76526FF7E51000F5984 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				7C26A76626FF7EB0000F5984 /* Service */,
 				41A41B7B270403DE0099D809 /* View */,
 				41A41B7C270404550099D809 /* ViewModel */,
+				7C26A76626FF7EB0000F5984 /* Service */,
 			);
 			path = Home;
 			sourceTree = "<group>";

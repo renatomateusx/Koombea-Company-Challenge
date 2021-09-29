@@ -87,6 +87,9 @@ extension HomeViewController: HomeViewModelDelegate {
     }
     
     func onFailureFetchingPost(error: Error) {
+        if self.refreshControl.isRefreshing {
+            self.refreshControl.endRefreshing()
+        }
         self.tableView.backgroundView = self.getEmptyView()
     }
 }
