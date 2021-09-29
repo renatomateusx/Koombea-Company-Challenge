@@ -9,3 +9,4 @@ External Roboto Font<br/>
 
 # Preview
 <img src="https://github.com/renatomateusx/Koombea-Company-Challenge/blob/master/koombeaGif.gif" width="350" title="Koombea Challenge">
+<img src="https://github.com/renatomateusx/Koombea-Company-Challenge/blob/master/koombeaGifOffLine.gif" width="350" title="Koombea Challenge OffLine">
