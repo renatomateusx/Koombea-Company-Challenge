@@ -25,6 +25,18 @@ class HomeViewControllerlUITest: XCTestCase {
         cell.tap()
     }
     
+    func testActiveIndicators() {
+        let app = XCUIApplication()
+        app.launch()
+        let table = app.tables.element
+        XCTAssertTrue(table.exists)
+        
+        let tables = app.tables.element(boundBy: 1)
+        let start = tables.coordinate(withNormalizedOffset:  CGVector(dx: 0.0, dy: 0.0))
+        let finish = tables.coordinate(withNormalizedOffset: CGVector(dx: 0.0, dy: 3.0))
+        start.press(forDuration: 0.5, thenDragTo: finish)
+    }
+    
     func testSwipeDownNavigation() {
         let app = XCUIApplication()
         app.launch()
