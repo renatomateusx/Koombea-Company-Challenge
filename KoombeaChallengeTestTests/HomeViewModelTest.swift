@@ -44,7 +44,7 @@ class HomeViewModelTest: XCTestCase {
             expectation.fulfill()
         }
         viewModel?.fetchPosts()
-        wait(for: [expectation], timeout: 20.0)
+        wait(for: [expectation], timeout: 60.0)
     }
 }
 

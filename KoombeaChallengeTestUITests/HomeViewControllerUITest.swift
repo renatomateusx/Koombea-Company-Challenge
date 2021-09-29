@@ -7,7 +7,7 @@
 
 import XCTest
 
-class KoombeaChallengeTestUITests: XCTestCase {
+class HomeViewControllerlUITest: XCTestCase {
     
     func testPullDownToRefresh() {
         let app = XCUIApplication()

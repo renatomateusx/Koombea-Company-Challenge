@@ -13,7 +13,6 @@ protocol PostServiceProtocol: AnyObject {
 }
 
 class PostsService: PostServiceProtocol {
-    
     func fetchPosts(completion: @escaping(Result<DataPosts, Error>) -> Void) {
         let request = AF.request(Constants.postsURL)
         request.responseJSON { response in

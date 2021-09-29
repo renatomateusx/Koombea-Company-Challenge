@@ -79,7 +79,7 @@
 		7C26A73E26FF7733000F5984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C26A73D26FF7733000F5984 /* Assets.xcassets */; };
 		7C26A74126FF7733000F5984 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C26A73F26FF7733000F5984 /* LaunchScreen.storyboard */; };
 		7C26A74C26FF7733000F5984 /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A74B26FF7733000F5984 /* HomeViewModelTest.swift */; };
-		7C26A75726FF7733000F5984 /* KoombeaChallengeTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A75626FF7733000F5984 /* KoombeaChallengeTestUITests.swift */; };
+		7C26A75726FF7733000F5984 /* HomeViewControllerUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A75626FF7733000F5984 /* HomeViewControllerUITest.swift */; };
 		7C26A76826FF7EBF000F5984 /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A76726FF7EBF000F5984 /* PostsService.swift */; };
 		7C26A76A26FF7F54000F5984 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A76926FF7F54000F5984 /* Constants.swift */; };
 		7C26A76C26FF8229000F5984 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C26A76B26FF8229000F5984 /* HomeViewModel.swift */; };
@@ -160,7 +160,7 @@
 		7C26A74B26FF7733000F5984 /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
 		7C26A74D26FF7733000F5984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C26A75226FF7733000F5984 /* KoombeaChallengeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoombeaChallengeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C26A75626FF7733000F5984 /* KoombeaChallengeTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoombeaChallengeTestUITests.swift; sourceTree = "<group>"; };
+		7C26A75626FF7733000F5984 /* HomeViewControllerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerUITest.swift; sourceTree = "<group>"; };
 		7C26A75826FF7733000F5984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C26A76726FF7EBF000F5984 /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
 		7C26A76926FF7F54000F5984 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -311,8 +311,6 @@
 		41B960D027020F0B0028B439 /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
-				7C26A77926FFD46D000F5984 /* MainPostViewCell.swift */,
-				7C26A77A26FFD46D000F5984 /* MainPostViewCell.xib */,
 				41B960D1270211690028B439 /* OneBigImageCell.swift */,
 				41B960D2270211690028B439 /* OneBigImageCell.xib */,
 				41B960D527023AE10028B439 /* TwoSmallImagesViewCell.swift */,
@@ -321,6 +319,8 @@
 				41B960DA270243DF0028B439 /* ThreeImagesViewCell.xib */,
 				41B960DD27024B890028B439 /* FourMoreImagesViewCell.swift */,
 				41B960DE27024B890028B439 /* FourMoreImagesViewCell.xib */,
+				7C26A77926FFD46D000F5984 /* MainPostViewCell.swift */,
+				7C26A77A26FFD46D000F5984 /* MainPostViewCell.xib */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -374,7 +374,7 @@
 		7C26A75526FF7733000F5984 /* KoombeaChallengeTestUITests */ = {
 			isa = PBXGroup;
 			children = (
-				7C26A75626FF7733000F5984 /* KoombeaChallengeTestUITests.swift */,
+				7C26A75626FF7733000F5984 /* HomeViewControllerUITest.swift */,
 				7C26A75826FF7733000F5984 /* Info.plist */,
 			);
 			path = KoombeaChallengeTestUITests;
@@ -788,7 +788,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C26A75726FF7733000F5984 /* KoombeaChallengeTestUITests.swift in Sources */,
+				7C26A75726FF7733000F5984 /* HomeViewControllerUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
