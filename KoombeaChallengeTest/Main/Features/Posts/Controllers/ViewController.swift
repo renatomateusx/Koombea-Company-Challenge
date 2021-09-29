@@ -64,6 +64,7 @@ extension ViewController {
 extension ViewController {
     func setupData() {
         viewModel.delegate = self
+        viewModel.offLineDelegate = self
         if dataSource.isEmpty {
             tableView.showLoading()
         }
@@ -82,10 +83,6 @@ extension ViewController: ViewControllerViewModelDelegate {
         self.tableView.reloadData()
         if self.refreshControl.isRefreshing {
             self.refreshControl.endRefreshing()
-        }
-        if viewModel.isOffLine {
-            self.showToast(message: "You're running offline",
-                           font: .systemFont(ofSize: 16, weight: .bold))
         }
     }
     
@@ -148,6 +145,15 @@ extension ViewController: UITableViewDelegate {
             return 65
         }
         return 0
+    }
+}
+
+// MARK: - ViewControllerViewModelOffLineDelegate
+
+extension ViewController: ViewControllerViewModelOffLineDelegate {
+    func runningOffLine() {
+        self.showToast(message: "You're running offline",
+                       font: .systemFont(ofSize: 16, weight: .bold))
     }
 }
 

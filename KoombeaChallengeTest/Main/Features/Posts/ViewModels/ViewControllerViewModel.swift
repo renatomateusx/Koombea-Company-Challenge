@@ -8,6 +8,10 @@
 import UIKit
 import Foundation
 
+protocol ViewControllerViewModelOffLineDelegate: AnyObject {
+    func runningOffLine()
+}
+
 protocol ViewControllerViewModelDelegate: AnyObject {
     func onSuccessFetchingPost(posts: [UserPosts], lastUpdated: Double)
     func onFailureFetchingPost(error: Error)
@@ -18,6 +22,7 @@ class ViewControllerViewModel {
     // MARK: - Private Properties
     let postService: PostServiceProtocol
     var delegate: ViewControllerViewModelDelegate?
+    var offLineDelegate: ViewControllerViewModelOffLineDelegate?
     var isOffLine: Bool = false
     
     // MARK: - Public Properties
@@ -46,6 +51,7 @@ class ViewControllerViewModel {
                 let posts: [UserPosts] = DBService.shared.get()
                 if posts.count > 0 {
                     self.isOffLine = true
+                    self.offLineDelegate?.runningOffLine()
                     let lastUpdated = DBService.shared.getLastUpdate()
                     self.delegate?.onSuccessFetchingPost(posts: posts,
                                                          lastUpdated: lastUpdated)
